@@ -1,0 +1,38 @@
+on:
+  push:
+    branches:
+      - sync
+  pull_request:
+  schedule:
+    - cron: '0 0 */1 * *'
+
+name: Sync
+
+jobs:
+  sync-from-upstream:
+    name: Sync-From-Upstream
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+        with:
+          fetch-depth: 2
+      - name: Fetch upstream
+        run: |
+          git clone -b 6.x --depth=1 ${GIT_URL} laravel
+          cp SUMMARY.md book.json laravel
+          mkdir -p laravel/.github/workflows
+          cp .github/workflows/gitbook.yaml laravel/.github/workflows/
+        env:
+          GIT_URL: https://github.com/laravel/docs
+      - name: Push docs src
+        if: github.event_name == 'push' || github.event_name == 'schedule'
+        uses: docker://pcit/pages
+        env:
+          PCIT_EMAIL: khs1994@khs1994.com
+          PCIT_GIT_TOKEN: ${{ secrets.PCIT_GIT_TOKEN }}
+          PCIT_GIT_URL: github.com/${{ github.repository }}
+          PCIT_KEEP_HISTORY: "1"
+          PCIT_LOCAL_DIR: laravel
+          PCIT_MESSAGE: Sync from laravel/docs by PCIT ${{ github.sha }}
+          PCIT_TARGET_BRANCH: master
+          PCIT_USERNAME: khs1994
