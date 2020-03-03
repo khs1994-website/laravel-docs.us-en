@@ -22,8 +22,11 @@ jobs:
           cp SUMMARY.md book.json laravel
           mkdir -p laravel/.github/workflows
           cp .github/workflows/gitbook.yaml laravel/.github/workflows/
+          UPSTREAM_COMMIT_SHA=`git -C laravel log --abbrev-commit --pretty="%h" -1`
+          echo "::set-output name=UPSTREAM_COMMIT_SHA::${UPSTREAM_COMMIT_SHA}"
         env:
           GIT_URL: https://github.com/laravel/docs
+        id: upstream
       - name: Push docs src
         if: github.event_name == 'push' || github.event_name == 'schedule'
         uses: docker://pcit/pages
@@ -33,6 +36,6 @@ jobs:
           PCIT_GIT_URL: github.com/${{ github.repository }}
           PCIT_KEEP_HISTORY: "true"
           PCIT_LOCAL_DIR: laravel
-          PCIT_MESSAGE: Sync from laravel/docs by PCIT ${{ github.sha }}
+          PCIT_MESSAGE: Sync from laravel/docs ${{ steps.upstream.outputs.UPSTREAM_COMMIT_SHA }} by PCIT
           PCIT_TARGET_BRANCH: master
           PCIT_USERNAME: khs1994
