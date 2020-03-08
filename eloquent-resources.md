@@ -318,7 +318,7 @@ If you would like to disable the wrapping of the outermost resource, you may use
 
     namespace App\Providers;
 
-    use Illuminate\Http\Resources\Json\Resource;
+    use Illuminate\Http\Resources\Json\JsonResource;
     use Illuminate\Support\ServiceProvider;
 
     class AppServiceProvider extends ServiceProvider
@@ -340,7 +340,7 @@ If you would like to disable the wrapping of the outermost resource, you may use
          */
         public function boot()
         {
-            Resource::withoutWrapping();
+            JsonResource::withoutWrapping();
         }
     }
 

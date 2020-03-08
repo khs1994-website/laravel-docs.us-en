@@ -118,6 +118,8 @@ By default, all of the queueable jobs for your application are stored in the `ap
 
 The generated class will implement the `Illuminate\Contracts\Queue\ShouldQueue` interface, indicating to Laravel that the job should be pushed onto the queue to run asynchronously.
 
+> {tip} Job stubs may be customized using [stub publishing](/docs/{{version}}/artisan#stub-customization)
+
 <a name="class-structure"></a>
 ### Class Structure
 
@@ -296,6 +298,12 @@ Once you have written your job class, you may dispatch it using the `dispatch` m
         }
     }
 
+If you would like to conditionally dispatch a job, you may use the `dispatchIf` and `dispatchUnless` methods:
+
+    ProcessPodcast::dispatchIf($accountActive = true, $podcast);
+
+    ProcessPodcast::dispatchUnless($accountSuspended = false, $podcast);
+
 <a name="delayed-dispatching"></a>
 ### Delayed Dispatching
 
@@ -327,6 +335,23 @@ If you would like to delay the execution of a queued job, you may use the `delay
     }
 
 > {note} The Amazon SQS queue service has a maximum delay time of 15 minutes.
+
+#### Dispatching After The Response Is Sent To Browser
+
+Alternatively, the `dispatchAfterResponse` method delays dispatching a job until after the response is sent to the user's browser. This will still allow the user to begin using the application even though a queued job is still executing. This should typically only be used for jobs that take about a second, such as sending an email:
+
+    use App\Jobs\SendNotification;
+
+    SendNotification::dispatchAfterResponse();
+
+You may `dispatch` a Closure and chain the `afterResponse` method onto the helper to execute a Closure after the response has been sent to the browser:
+
+    use App\Mail\WelcomeMessage;
+    use Illuminate\Support\Facades\Mail;
+
+    dispatch(function () {
+        Mail::to('taylor@laravel.com')->send(new WelcomeMessage);
+    })->afterResponse();
 
 <a name="synchronous-dispatching"></a>
 ### Synchronous Dispatching
@@ -365,6 +390,16 @@ Job chaining allows you to specify a list of queued jobs that should be run in s
     ProcessPodcast::withChain([
         new OptimizePodcast,
         new ReleasePodcast
+    ])->dispatch();
+
+In addition to chaining job class instances, you may also chain Closures:
+
+    ProcessPodcast::withChain([
+        new OptimizePodcast,
+        new ReleasePodcast,
+        function () {
+            Podcast::update(...);
+        },
     ])->dispatch();
 
 > {note} Deleting jobs using the `$this->delete()` method will not prevent chained jobs from being processed. The chain will only stop executing if a job in the chain fails.
@@ -500,6 +535,48 @@ As an alternative to defining how many times a job may be attempted before it fa
     }
 
 > {tip} You may also define a `retryUntil` method on your queued event listeners.
+
+#### Max Exceptions
+
+Sometimes you may wish to specify that a job may be attempted many times, but should fail if the retries are triggered by a given number of exceptions. To accomplish this, you may define a `maxExceptions` property on your job class:
+
+    <?php
+
+    namespace App\Jobs;
+
+    class ProcessPodcast implements ShouldQueue
+    {
+        /**
+         * The number of times the job may be attempted.
+         *
+         * @var int
+         */
+        public $tries = 25;
+
+        /**
+         * The maximum number of exceptions to allow before failing.
+         *
+         * @var int
+         */
+        public $maxExceptions = 3;
+
+        /**
+         * Execute the job.
+         *
+         * @return void
+         */
+        public function handle()
+        {
+            Redis::throttle('key')->allow(10)->every(60)->then(function () {
+                // Lock obtained, process the podcast...
+            }, function () {
+                // Unable to obtain lock...
+                return $this->release(10);
+            });
+        }
+    }
+
+In this example, the job is released for ten seconds if the application is unable to obtain a Redis lock and will continue to be retried up to 25 times. However, the job will fail if three unhandled exceptions are thrown by the job.
 
 #### Timeout
 

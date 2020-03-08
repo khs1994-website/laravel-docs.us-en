@@ -19,7 +19,7 @@ The Laravel framework has a few system requirements. All of these requirements a
 However, if you are not using Homestead, you will need to make sure your server meets the following requirements:
 
 <div class="content-list" markdown="1">
-- PHP >= 7.2.0
+- PHP >= 7.2.5
 - BCMath PHP Extension
 - Ctype PHP Extension
 - Fileinfo PHP extension
@@ -60,7 +60,7 @@ Once installed, the `laravel new` command will create a fresh Laravel installati
 
 Alternatively, you may also install Laravel by issuing the Composer `create-project` command in your terminal:
 
-    composer create-project --prefer-dist laravel/laravel blog "6.*"
+    composer create-project --prefer-dist laravel/laravel blog
 
 #### Local Development Server
 

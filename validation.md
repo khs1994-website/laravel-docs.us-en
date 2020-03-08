@@ -117,9 +117,9 @@ Alternatively, validation rules may be specified as arrays of rules instead of a
         'body' => ['required'],
     ]);
 
-If you would like to specify the [error bag](#named-error-bags) in which the error messages should be placed, you may use the `validateWithBag` method:
+You may use the `validateWithBag` method to validate a request and store any error messages within a [named error bag](#named-error-bags):
 
-    $request->validateWithBag('blog', [
+    $validatedData = $request->validateWithBag('post', [
         'title' => ['required', 'unique:posts', 'max:255'],
         'body' => ['required'],
     ]);
@@ -410,6 +410,13 @@ If you would like to create a validator instance manually but still take advanta
         'title' => 'required|unique:posts|max:255',
         'body' => 'required',
     ])->validate();
+
+You may use the `validateWithBag` method to store the error messages in a [named error bag](#named-error-bags) if validation fails:
+
+    Validator::make($request->all(), [
+        'title' => 'required|unique:posts|max:255',
+        'body' => 'required',
+    ])->validateWithBag('post');
 
 <a name="named-error-bags"></a>
 ### Named Error Bags
@@ -1178,6 +1185,24 @@ The field under validation must be a valid RFC 4122 (version 1, 3, 4, or 5) univ
 
 <a name="conditionally-adding-rules"></a>
 ## Conditionally Adding Rules
+
+#### Skipping Validation When Fields Have Certain Values
+
+You may occasionally wish to not validate a given field if another field has a given value. You may accomplish this using the `exclude_if` validation rule. In this example, the `appointment_date` and `doctor_name` fields will not be validated if the `has_appointment` field has a value of `false`:
+
+    $v = Validator::make($data, [
+        'has_appointment' => 'required|bool',
+        'appointment_date' => 'exclude_if:has_appointment,false|required|date',
+        'doctor_name' => 'exclude_if:has_appointment,false|required|string',
+    ]);
+
+Alternatively, you may use the `exclude_unless` rule to not validate a given field unless another field has a given value:
+
+    $v = Validator::make($data, [
+        'has_appointment' => 'required|bool',
+        'appointment_date' => 'exclude_unless:has_appointment,true|required|date',
+        'doctor_name' => 'exclude_unless:has_appointment,true|required|string',
+    ]);
 
 #### Validating When Present
 

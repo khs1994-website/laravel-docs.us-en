@@ -24,6 +24,7 @@
     - [Local Scopes](#local-scopes)
 - [Comparing Models](#comparing-models)
 - [Events](#events)
+    - [Using Closures](#events-using-closures)
     - [Observers](#observers)
 
 <a name="introduction"></a>
@@ -766,7 +767,7 @@ Writing a global scope is simple. Define a class that implements the `Illuminate
 
 #### Applying Global Scopes
 
-To assign a global scope to a model, you should override a given model's `boot` method and use the `addGlobalScope` method:
+To assign a global scope to a model, you should override a given model's `booted` method and use the `addGlobalScope` method:
 
     <?php
 
@@ -778,14 +779,12 @@ To assign a global scope to a model, you should override a given model's `boot` 
     class User extends Model
     {
         /**
-         * The "booting" method of the model.
+         * The "booted" method of the model.
          *
          * @return void
          */
-        protected static function boot()
+        protected static function booted()
         {
-            parent::boot();
-
             static::addGlobalScope(new AgeScope);
         }
     }
@@ -808,14 +807,12 @@ Eloquent also allows you to define global scopes using Closures, which is partic
     class User extends Model
     {
         /**
-         * The "booting" method of the model.
+         * The "booted" method of the model.
          *
          * @return void
          */
-        protected static function boot()
+        protected static function booted()
         {
-            parent::boot();
-
             static::addGlobalScope('age', function (Builder $builder) {
                 $builder->where('age', '>', 200);
             });
@@ -969,6 +966,33 @@ To get started, define a `$dispatchesEvents` property on your Eloquent model tha
     }
 
 After defining and mapping your Eloquent events, you may use [event listeners](https://laravel.com/docs/{{version}}/events#defining-listeners) to handle the events.
+
+<a name="events-using-closures"></a>
+### Using Closures
+
+Instead of using custom event classes, you may register Closures that execute when various model events are fired. Typically, you should register these Closures in the `booted` method of your model:
+
+    <?php
+
+    namespace App;
+
+    use App\Scopes\AgeScope;
+    use Illuminate\Database\Eloquent\Model;
+
+    class User extends Model
+    {
+        /**
+         * The "booted" method of the model.
+         *
+         * @return void
+         */
+        protected static function booted()
+        {
+            static::created(function ($user) {
+                //
+            });
+        }
+    }
 
 <a name="observers"></a>
 ### Observers

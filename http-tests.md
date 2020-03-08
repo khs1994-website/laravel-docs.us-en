@@ -189,6 +189,10 @@ Laravel also provides several helpers for testing JSON APIs and their responses.
 
 > {tip} The `assertJson` method converts the response to an array and utilizes `PHPUnit::assertArraySubset` to verify that the given array exists within the JSON response returned by the application. So, if there are other properties in the JSON response, this test will still pass as long as the given fragment is present.
 
+In addition, JSON response data may be accessed as array variables on the response:
+
+    $this->assertTrue($response['created']);
+
 <a name="verifying-exact-match"></a>
 ### Verifying An Exact JSON Match
 
@@ -395,16 +399,16 @@ Assert that the response has a 201 status code:
 <a name="assert-dont-see"></a>
 #### assertDontSee
 
-Assert that the given string is not contained within the response:
+Assert that the given string is not contained within the response. This assertion will automatically escape the given string unless you pass a second argument of `false`:
 
-    $response->assertDontSee($value);
+    $response->assertDontSee($value, $escaped = true);
 
 <a name="assert-dont-see-text"></a>
 #### assertDontSeeText
 
-Assert that the given string is not contained within the response text:
+Assert that the given string is not contained within the response text. This assertion will automatically escape the given string unless you pass a second argument of `false`:
 
-    $response->assertDontSeeText($value);
+    $response->assertDontSeeText($value, $escaped = true);
 
 <a name="assert-exact-json"></a>
 #### assertExactJson
@@ -542,30 +546,30 @@ Assert that the response is a redirect to a given URI:
 <a name="assert-see"></a>
 #### assertSee
 
-Assert that the given string is contained within the response:
+Assert that the given string is contained within the response. This assertion will automatically escape the given string unless you pass a second argument of `false`:
 
-    $response->assertSee($value);
+    $response->assertSee($value, $escaped = true);
 
 <a name="assert-see-in-order"></a>
 #### assertSeeInOrder
 
-Assert that the given strings are contained in order within the response:
+Assert that the given strings are contained in order within the response. This assertion will automatically escape the given strings unless you pass a second argument of `false`:
 
-    $response->assertSeeInOrder(array $values);
+    $response->assertSeeInOrder(array $values, $escaped = true);
 
 <a name="assert-see-text"></a>
 #### assertSeeText
 
-Assert that the given string is contained within the response text:
+Assert that the given string is contained within the response text. This assertion will automatically escape the given string unless you pass a second argument of `false`:
 
-    $response->assertSeeText($value);
+    $response->assertSeeText($value, $escaped = true);
 
 <a name="assert-see-text-in-order"></a>
 #### assertSeeTextInOrder
 
-Assert that the given strings are contained in order within the response text:
+Assert that the given strings are contained in order within the response text. This assertion will automatically escape the given strings unless you pass a second argument of `false`:
 
-    $response->assertSeeTextInOrder(array $values);
+    $response->assertSeeTextInOrder(array $values, $escaped = true);
 
 <a name="assert-session-has"></a>
 #### assertSessionHas
@@ -650,6 +654,10 @@ Assert that the response has an unauthorized (401) status code:
 Assert that the response view was given a piece of data:
 
     $response->assertViewHas($key, $value = null);
+
+In addition, view data may be accessed as array variables on the response:
+
+    $this->assertEquals('Taylor', $response['name']);
 
 <a name="assert-view-has-all"></a>
 #### assertViewHasAll

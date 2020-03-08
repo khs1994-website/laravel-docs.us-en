@@ -35,6 +35,8 @@ To create a migration, use the `make:migration` [Artisan command](/docs/{{versio
 
 The new migration will be placed in your `database/migrations` directory. Each migration file name contains a timestamp, which allows Laravel to determine the order of the migrations.
 
+> {tip} Migration stubs may be customized using [stub publishing](/docs/{{version}}/artisan#stub-customization)
+
 The `--table` and `--create` options may also be used to indicate the name of the table and whether or not the migration will be creating a new table. These options pre-fill the generated migration stub file with the specified table:
 
     php artisan make:migration create_users_table --create=users
@@ -66,7 +68,7 @@ Within both of these methods you may use the Laravel schema builder to expressiv
         public function up()
         {
             Schema::create('flights', function (Blueprint $table) {
-                $table->bigIncrements('id');
+                $table->id();
                 $table->string('name');
                 $table->string('airline');
                 $table->timestamps();
@@ -144,7 +146,7 @@ The `migrate:fresh` command will drop all tables from the database and then exec
 To create a new database table, use the `create` method on the `Schema` facade. The `create` method accepts two arguments: the first is the name of the table, while the second is a `Closure` which receives a `Blueprint` object that may be used to define the new table:
 
     Schema::create('users', function (Blueprint $table) {
-        $table->bigIncrements('id');
+        $table->id();
     });
 
 When creating the table, you may use any of the schema builder's [column methods](#creating-columns) to define the table's columns.
@@ -166,7 +168,7 @@ You may check for the existence of a table or column using the `hasTable` and `h
 If you want to perform a schema operation on a database connection that is not your default connection, use the `connection` method:
 
     Schema::connection('foo')->create('users', function (Blueprint $table) {
-        $table->bigIncrements('id');
+        $table->id();
     });
 
 You may use the following commands on the schema builder to define the table's options:
@@ -213,6 +215,8 @@ The schema builder contains a variety of column types that you may specify when 
 
 Command  |  Description
 -------  |  -----------
+`$table->id();`  |  Alias of `$table->bigIncrements('id')`.
+`$table->foreignId('user_id');`  |  Alias of `$table->unsignedBigInteger('user_id')`.
 `$table->bigIncrements('id');`  |  Auto-incrementing UNSIGNED BIGINT (primary key) equivalent column.
 `$table->bigInteger('votes');`  |  BIGINT equivalent column.
 `$table->binary('data');`  |  BLOB equivalent column.
@@ -252,8 +256,8 @@ Command  |  Description
 `$table->set('flavors', ['strawberry', 'vanilla']);`  |  SET equivalent column.
 `$table->smallIncrements('id');`  |  Auto-incrementing UNSIGNED SMALLINT (primary key) equivalent column.
 `$table->smallInteger('votes');`  |  SMALLINT equivalent column.
-`$table->softDeletes(0);`  |  Adds a nullable `deleted_at` TIMESTAMP equivalent column for soft deletes with precision (total digits).
-`$table->softDeletesTz(0);`  |  Adds a nullable `deleted_at` TIMESTAMP (with timezone) equivalent column for soft deletes with precision (total digits).
+`$table->softDeletes('deleted_at', 0);`  |  Adds a nullable `deleted_at` TIMESTAMP equivalent column for soft deletes with precision (total digits).
+`$table->softDeletesTz('deleted_at', 0);`  |  Adds a nullable `deleted_at` TIMESTAMP (with timezone) equivalent column for soft deletes with precision (total digits).
 `$table->string('name', 100);`  |  VARCHAR equivalent column with a length.
 `$table->text('description');`  |  TEXT equivalent column.
 `$table->time('sunrise', 0);`  |  TIME equivalent column with precision (total digits).
@@ -322,7 +326,7 @@ The `default` modifier accepts a value or an `\Illuminate\Database\Query\Express
         public function up()
         {
             Schema::create('flights', function (Blueprint $table) {
-                $table->bigIncrements('id');
+                $table->id();
                 $table->json('movies')->default(new Expression('(JSON_ARRAY())'));
                 $table->timestamps();
             });
@@ -482,10 +486,18 @@ Laravel also provides support for creating foreign key constraints, which are us
         $table->foreign('user_id')->references('id')->on('users');
     });
 
+Since this syntax is rather verbose, Laravel provides additional, terser methods that use convention to provide a better developer experience. For example, the example above you could be written like so:
+
+    Schema::table('posts', function (Blueprint $table) {
+        $table->foreignId('user_id')->constrained();
+    });
+
+The `foreignId` method is an alias for `unsignedBigInteger` while the `constrained` method will use convention to determine the table and column name being referenced.
+
 You may also specify the desired action for the "on delete" and "on update" properties of the constraint:
 
-    $table->foreign('user_id')
-          ->references('id')->on('users')
+    $table->foreignId('user_id')
+          ->constrained()
           ->onDelete('cascade');
 
 To drop a foreign key, you may use the `dropForeign` method, passing the foreign key constraint to be deleted as an argument. Foreign key constraints use the same naming convention as indexes, based on the table name and the columns in the constraint, followed by a "\_foreign" suffix:
