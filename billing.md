@@ -522,8 +522,6 @@ If you would like to swap plans and immediately invoice the user instead of wait
 
     $user->subscription('default')->swapAndInvoice('provider-plan-id');
 
-> {note} When working with multiplan subscriptions, you cannot use the `swap` and `swapAndInvoice` methods. Instead, you should use the `addPlan`, `addPlanAndInvoice`, and `removePlan` methods. More information about these methods may be found in the [multiplan subscription documentation](#multiplan-subscriptions).
-
 #### Prorations
 
 By default, Stripe prorates charges when swapping between plans. The `noProrate` method may be used to update the subscription's without prorating the charges:
@@ -579,6 +577,33 @@ You may remove plans from subscriptions using the `removePlan` method:
     $user->subscription('default')->removePlan('chat-plan');
 
 > {note} You may not remove the last plan on a subscription. Instead, you may simply cancel the subscription.
+
+### Swapping
+
+You may also change the plans attached to a multiplan subscription. For example, imagine you're on a `basic-plan` subscription with a `chat-plan` add-on and you want to upgrade to the `pro-plan` plan:
+
+    $user = User::find(1);
+
+    $user->subscription('default')->swap(['pro-plan', 'chat-plan']);
+
+When executing the code above, the underlying subscription item with the `basic-plan` is deleted and the one with the `chat-plan` is preserved. Additionally, a new subscription item for the new `pro-plan` is created.
+
+You can also specify subscription item options. For example, you may need to specify the subscription plan quantities:
+
+    $user = User::find(1);
+
+    $user->subscription('default')->swap([
+        'pro-plan' => ['quantity' => 5],
+        'chat-plan'
+    ]);
+
+If you want to swap a single plan on a subscription, you may do so using the `swap` method on the subscription item itself. This approach is useful if you, for example, want to preserve all of the existing metadata on the subscription item.
+
+    $user = User::find(1);
+
+    $user->subscription('default')
+            ->findItemOrFail('basic-plan')
+            ->swap('pro-plan');
 
 #### Proration
 
