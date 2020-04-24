@@ -23,6 +23,7 @@
     - [JavaScript Dialogs](#javascript-dialogs)
     - [Scoping Selectors](#scoping-selectors)
     - [Waiting For Elements](#waiting-for-elements)
+    - [Scrolling An Element Into View](#scrolling-an-element-into-view)
     - [Making Vue Assertions](#making-vue-assertions)
 - [Available Assertions](#available-assertions)
 - [Pages](#pages)
@@ -621,6 +622,14 @@ Many of the "wait" methods in Dusk rely on the underlying `waitUsing` method. Yo
     $browser->waitUsing(10, 1, function () use ($something) {
         return $something->isReady();
     }, "Something wasn't ready in time.");
+
+<a name="scrolling-an-element-into-view"></a>
+### Scrolling An Element Into View
+
+Sometimes you may not be able to click on an element because it is outside of the viewable area of the browser. The `scrollIntoView` method will scroll the browser window until the element at the given selector is within the view:
+
+    $browser->scrollIntoView('selector')
+            ->click('selector');
 
 <a name="making-vue-assertions"></a>
 ### Making Vue Assertions
