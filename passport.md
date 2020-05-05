@@ -5,9 +5,11 @@
 - [Installation](#installation)
     - [Frontend Quickstart](#frontend-quickstart)
     - [Deploying Passport](#deploying-passport)
+    - [Migration Customization](#migration-customization)
 - [Configuration](#configuration)
     - [Token Lifetimes](#token-lifetimes)
     - [Overriding Default Models](#overriding-default-models)
+    - [Client Primary Key](#client-primary-key)
 - [Issuing Access Tokens](#issuing-access-tokens)
     - [Managing Clients](#managing-clients)
     - [Requesting Tokens](#requesting-tokens)
@@ -66,7 +68,9 @@ Next, you should run the `passport:install` command. This command will create th
 
     php artisan passport:install
 
-After running this command, add the `Laravel\Passport\HasApiTokens` trait to your `App\User` model. This trait will provide a few helper methods to your model which allow you to inspect the authenticated user's token and scopes:
+> {tip} If you would like to use UUIDs as the primary key value of the Passport `Client` model instead of auto-incrementing integers, please install Passport using [the `uuids` option](#client-uuids).
+
+After running the `passport:install` command, add the `Laravel\Passport\HasApiTokens` trait to your `App\User` model. This trait will provide a few helper methods to your model which allow you to inspect the authenticated user's token and scopes:
 
     <?php
 
@@ -129,11 +133,12 @@ Finally, in your `config/auth.php` configuration file, you should set the `drive
         ],
     ],
 
-### Migration Customization
+<a name="client-uuids"></a>
+#### Client UUIDs
 
-If you are not going to use Passport's default migrations, you should call the `Passport::ignoreMigrations` method in the `register` method of your `AppServiceProvider`. You may export the default migrations using `php artisan vendor:publish --tag=passport-migrations`.
+You may run the `passport:install` command with the `--uuids` option present. This flag will instruct Passport that you would like to use UUIDs instead of auto-incrementing integers as the Passport `Client` model's primary key values. After running the `passport:install` command with the `--uuids` option, you will be given additional instructions regarding disabling Passport's default migrations:
 
-By default, Passport uses an integer column to store the `user_id`. If your application uses a different column type to identify users (for example: UUIDs), you should modify the default Passport migrations after publishing them.
+    php artisan passport:install --uuids
 
 <a name="frontend-quickstart"></a>
 ### Frontend Quickstart
@@ -203,6 +208,11 @@ Additionally, you may publish Passport's configuration file using `php artisan v
     PASSPORT_PUBLIC_KEY="-----BEGIN PUBLIC KEY-----
     <public key here>
     -----END PUBLIC KEY-----"
+
+<a name="migration-customization"></a>
+### Migration Customization
+
+If you are not going to use Passport's default migrations, you should call the `Passport::ignoreMigrations` method in the `register` method of your `AppServiceProvider`. You may export the default migrations using `php artisan vendor:publish --tag=passport-migrations`.
 
 <a name="configuration"></a>
 ## Configuration
