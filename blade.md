@@ -570,7 +570,6 @@ Component constructor arguments should be specified using `camelCase`, while `ke
      * Create the component instance.
      *
      * @param  string  $alertType
-     * @param  string  $message
      * @return void
      */
     public function __construct($alertType)
@@ -920,8 +919,8 @@ Once the custom conditional has been defined, we can easily use it on our templa
         // The application is using the aws provider...
     @else
         // The application is not using the digitalocean or aws environment...
-    @endenv
+    @endcloud
 
     @unlesscloud('aws')
         // The application is not using the aws environment...
-    @endenv
+    @endcloud
