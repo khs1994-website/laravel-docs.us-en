@@ -13,6 +13,9 @@
     - [Authentication](#authentication)
     - [Database Migrations](#migrations)
     - [Cookies](#cookies)
+    - [Taking A Screenshot](#taking-a-screenshot)
+    - [Storing Console Output To Disk](#storing-console-output-to-disk)
+    - [Storing Page Source To Disk](#storing-page-source-to-disk)
 - [Interacting With Elements](#interacting-with-elements)
     - [Dusk Selectors](#dusk-selectors)
     - [Clicking Links](#clicking-links)
@@ -349,6 +352,27 @@ You may use the `deleteCookie` method to delete the given cookie:
 
     $browser->deleteCookie('name');
 
+<a name="taking-a-screenshot"></a>
+### Taking A Screenshot
+
+You may use the `screenshot` method to take a screenshot and store it with the given filename. All screenshots will be stored within the `tests/Browser/screenshots` directory:
+
+    $browser->screenshot('filename');
+
+<a name="storing-console-output-to-disk"></a>
+### Storing Console Output To Disk
+
+You may use the `storeConsoleLog` method to write the console output to disk with the given filename. Console output will be stored within the `tests/Browser/console` directory:
+
+    $browser->storeConsoleLog('filename');
+
+<a name="storing-page-source-to-disk"></a>
+### Storing Page Source To Disk
+
+You may use the `storeSource` method to write the page's current source to disk with the given filename. The page source will be stored within the `tests/Browser/source` directory:
+
+    $browser->storeSource('filename');
+
 <a name="interacting-with-elements"></a>
 ## Interacting With Elements
 
@@ -382,7 +406,13 @@ To click a link, you may use the `clickLink` method on the browser instance. The
 
     $browser->clickLink($linkText);
 
-> {note} This method interacts with jQuery. If jQuery is not available on the page, Dusk will automatically inject it into the page so it is available for the test's duration.
+You may use the `seeLink` method to determine if a link that has the given display text is visible on the page:
+
+    if ($browser->seeLink($linkText)) {
+        // ...
+    }
+
+> {note} These methods interact with jQuery. If jQuery is not available on the page, Dusk will automatically inject it into the page so it is available for the test's duration.
 
 <a name="text-values-and-attributes"></a>
 ### Text, Values, & Attributes
