@@ -1739,7 +1739,7 @@ The `isAscii` method determines if a given string is an ASCII string:
 
     // true
 
-    $result = Str::of('ü')->isAcii();
+    $result = Str::of('ü')->isAscii();
 
     // false
 
@@ -1807,7 +1807,7 @@ The `limit` method truncates the given string at the specified length:
 
     // The quick brown fox...
 
-You may also pass a third argument to change the string that will be appended to the end:
+You may also pass a second argument to change the string that will be appended to the end:
 
     use Illuminate\Support\Str;
 
