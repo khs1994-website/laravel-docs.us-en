@@ -18,7 +18,7 @@ jobs:
           fetch-depth: 2
       - name: Fetch upstream
         run: |
-          git clone -b 7.x --depth=1 ${GIT_URL} laravel
+          git clone -b 8.x --depth=1 ${GIT_URL} laravel
           cp SUMMARY.md book.json laravel
           mkdir -p laravel/.github/workflows
           cp .github/workflows/gitbook.yaml laravel/.github/workflows/
