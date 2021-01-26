@@ -36,11 +36,7 @@ You may use the `make:migration` [Artisan command](/docs/{{version}}/artisan) to
 
     php artisan make:migration create_flights_table
 
-The `--table` and `--create` options may be used to indicate the name of the table and whether or not the migration will be creating a new table. These options pre-fill the generated migration file with the specified table:
-
-    php artisan make:migration create_flights_table --create=flights
-
-    php artisan make:migration add_destination_to_flights_table --table=flights
+Laravel will use the name of the migration to attempt to guess the name of the table and whether or not the migration will be creating a new table. If Laravel is able to determine the table name from the migration name, Laravel will pre-fill the generated migration file with the specified table. Otherwise, you may simply specify the table in the migration file manually.
 
 If you would like to specify a custom path for the generated migration, you may use the `--path` option when executing the `make:migration` command. The given path should be relative to your application's base path.
 
@@ -727,7 +723,7 @@ The `unsignedBigInteger` method creates an `UNSIGNED BIGINT` equivalent column:
 <a name="column-method-unsignedDecimal"></a>
 #### `unsignedDecimal()` {#collection-method}
 
-The `unsignedDecimal` method creates an `UNSIGNED DECIMAL` equivalent column with an optinoal precision (total digits) and scale (decimal digits):
+The `unsignedDecimal` method creates an `UNSIGNED DECIMAL` equivalent column with an optional precision (total digits) and scale (decimal digits):
 
     $table->unsignedDecimal('amount', $precision = 8, $scale = 2);
 
