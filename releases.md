@@ -8,17 +8,17 @@
 <a name="versioning-scheme"></a>
 ## Versioning Scheme
 
-Laravel and its other first-party packages follow [Semantic Versioning](https://semver.org). Major framework releases are released every six months (~March and ~September), while minor and patch releases may be released as often as every week. Minor and patch releases should **never** contain breaking changes.
+Laravel and its other first-party packages follow [Semantic Versioning](https://semver.org). Major framework releases are released every year (~September), while minor and patch releases may be released as often as every week. Minor and patch releases should **never** contain breaking changes.
 
 When referencing the Laravel framework or its components from your application or package, you should always use a version constraint such as `^8.0`, since major releases of Laravel do include breaking changes. However, we strive to always ensure you may update to a new major release in one day or less.
 
 <a name="exceptions"></a>
 ### Exceptions
 
-<a name="named-parameters"></a>
-#### Named Parameters
+<a name="named-arguments"></a>
+#### Named Arguments
 
-At this time, PHP's named parameters functionality are not covered by Laravel's backwards compatibility guidelines. We may choose to rename function parameters when necessary in order to improve the Laravel codebase. Therefore, using named parameters when calling Laravel methods should be done cautiously and with the understanding that the parameter names may change in the future.
+At this time, PHP's [named arguments](https://www.php.net/manual/en/functions.arguments.php#functions.named-arguments) functionality are not covered by Laravel's backwards compatibility guidelines. We may choose to rename function parameters when necessary in order to improve the Laravel codebase. Therefore, using named arguments when calling Laravel methods should be done cautiously and with the understanding that the parameter names may change in the future.
 
 <a name="support-policy"></a>
 ## Support Policy
