@@ -310,6 +310,19 @@ If you would like to add an "after" validation hook to a form request, you may u
         });
     }
 
+
+<a name="request-stopping-on-first-validation-rule-failure"></a>
+#### Stopping On First Validation Failure Attribute
+
+By adding a `stopOnFirstFailure` property to your request class, you may inform the validator that it should stop validating all attributes once a single validation failure has occurred:
+
+    /**
+     * Indicates if the validator should stop on the first rule failure.
+     *
+     * @var bool
+     */
+    protected $stopOnFirstFailure = true;
+
 <a name="authorizing-form-requests"></a>
 ### Authorizing Form Requests
 
@@ -444,6 +457,14 @@ If you do not want to use the `validate` method on the request, you may create a
 The first argument passed to the `make` method is the data under validation. The second argument is an array of the validation rules that should be applied to the data.
 
 After determining whether the request validation failed, you may use the `withErrors` method to flash the error messages to the session. When using this method, the `$errors` variable will automatically be shared with your views after redirection, allowing you to easily display them back to the user. The `withErrors` method accepts a validator, a `MessageBag`, or a PHP `array`.
+
+#### Stopping On First Validation Failure
+
+The `stopOnFirstFailure` method will inform the validator that it should stop validating all attributes once a single validation failure has occurred:
+
+    if ($validator->stopOnFirstFailure()->fails()) {
+        // ...
+    }
 
 <a name="automatic-redirection"></a>
 ### Automatic Redirection
@@ -765,7 +786,13 @@ The field under validation must be a PHP `array`.
 <a name="rule-bail"></a>
 #### bail
 
-Stop running validation rules after the first validation failure.
+Stop running validation rules for the field after the first validation failure.
+
+While the `bail` rule will only stop validating a specific field when it encounters a validation failure, the `stopOnFirstFailure` method will inform the validator that it should stop validating all attributes once a single validation failure has occurred:
+
+    if ($validator->stopOnFirstFailure()->fails()) {
+        // ...
+    }
 
 <a name="rule-before"></a>
 #### before:_date_
@@ -1151,22 +1178,22 @@ The field under validation must be present and not empty unless the _anotherfiel
 <a name="rule-required-with"></a>
 #### required_with:_foo_,_bar_,...
 
-The field under validation must be present and not empty _only if_ any of the other specified fields are present.
+The field under validation must be present and not empty _only if_ any of the other specified fields are present and not empty.
 
 <a name="rule-required-with-all"></a>
 #### required_with_all:_foo_,_bar_,...
 
-The field under validation must be present and not empty _only if_ all of the other specified fields are present.
+The field under validation must be present and not empty _only if_ all of the other specified fields are present and not empty.
 
 <a name="rule-required-without"></a>
 #### required_without:_foo_,_bar_,...
 
-The field under validation must be present and not empty _only when_ any of the other specified fields are not present.
+The field under validation must be present and not empty _only when_ any of the other specified fields are empty or not present.
 
 <a name="rule-required-without-all"></a>
 #### required_without_all:_foo_,_bar_,...
 
-The field under validation must be present and not empty _only when_ all of the other specified fields are not present.
+The field under validation must be present and not empty _only when_ all of the other specified fields are empty or not present.
 
 <a name="rule-same"></a>
 #### same:_field_
