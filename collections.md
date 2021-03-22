@@ -1404,6 +1404,10 @@ The `mode` method returns the [mode value](https://en.wikipedia.org/wiki/Mode_(s
 
     // [1]
 
+    $mode = collect([1, 1, 2, 2])->mode();
+
+    // [1, 2]
+
 <a name="method-nth"></a>
 #### `nth()` {#collection-method}
 
@@ -1511,7 +1515,7 @@ The `pipeInto` method creates a new instance of the given class and passes the c
         /**
          * Create a new ResourceCollection instance.
          *
-         * @param  Collection  $resource
+         * @param  Collection  $collection
          * @return void
          */
         public function __construct(Collection $collection)
