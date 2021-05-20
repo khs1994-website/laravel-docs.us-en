@@ -1,0 +1,1855 @@
+
+<!DOCTYPE HTML>
+<html lang="us-en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Controllers · Laravel 英文文档</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="requests.html" />
+    
+    
+    <link rel="prev" href="csrf.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://docs.khs1994.com" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    Prologue
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="releases.html">
+            
+                <a href="releases.html">
+            
+                    
+                    Release Notes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="upgrade.html">
+            
+                <a href="upgrade.html">
+            
+                    
+                    Upgrade Guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="contributions.html">
+            
+                <a href="contributions.html">
+            
+                    
+                    Contribution Guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    Getting Started
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="installation.html">
+            
+                <a href="installation.html">
+            
+                    
+                    Installation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="configuration.html">
+            
+                <a href="configuration.html">
+            
+                    
+                    Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="structure.html">
+            
+                <a href="structure.html">
+            
+                    
+                    Directory Structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="homestead.html">
+            
+                <a href="homestead.html">
+            
+                    
+                    Homestead
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="valet.html">
+            
+                <a href="valet.html">
+            
+                    
+                    Valet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="deployment.html">
+            
+                <a href="deployment.html">
+            
+                    
+                    Deployment
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    Architecture Concepts
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="lifecycle.html">
+            
+                <a href="lifecycle.html">
+            
+                    
+                    Request Lifecycle
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="container.html">
+            
+                <a href="container.html">
+            
+                    
+                    Service Container
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="providers.html">
+            
+                <a href="providers.html">
+            
+                    
+                    Service Providers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="facades.html">
+            
+                <a href="facades.html">
+            
+                    
+                    Facades
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="contracts.html">
+            
+                <a href="contracts.html">
+            
+                    
+                    Contracts
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    The Basics
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="routing.html">
+            
+                <a href="routing.html">
+            
+                    
+                    Routing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="middleware.html">
+            
+                <a href="middleware.html">
+            
+                    
+                    Middleware
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="csrf.html">
+            
+                <a href="csrf.html">
+            
+                    
+                    CSRF Protection
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.4" data-path="controllers.html">
+            
+                <a href="controllers.html">
+            
+                    
+                    Controllers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="requests.html">
+            
+                <a href="requests.html">
+            
+                    
+                    Requests
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="responses.html">
+            
+                <a href="responses.html">
+            
+                    
+                    Responses
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="views.html">
+            
+                <a href="views.html">
+            
+                    
+                    Views
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="urls.html">
+            
+                <a href="urls.html">
+            
+                    
+                    URL Generation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="session.html">
+            
+                <a href="session.html">
+            
+                    
+                    Session
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.10" data-path="validation.html">
+            
+                <a href="validation.html">
+            
+                    
+                    Validation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.11" data-path="errors.html">
+            
+                <a href="errors.html">
+            
+                    
+                    Error Handling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.12" data-path="logging.html">
+            
+                <a href="logging.html">
+            
+                    
+                    Logging
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    Frontend
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="blade.html">
+            
+                <a href="blade.html">
+            
+                    
+                    Blade Templates
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="localization.html">
+            
+                <a href="localization.html">
+            
+                    
+                    Localization
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="frontend.md">
+            
+                <span>
+            
+                    
+                    Frontend Scaffolding
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="mix.html">
+            
+                <a href="mix.html">
+            
+                    
+                    Compiling Assets
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    Security
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="authentication.html">
+            
+                <a href="authentication.html">
+            
+                    
+                    Authentication
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="api-authentication.md">
+            
+                <span>
+            
+                    
+                    API Authentication
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="authorization.html">
+            
+                <a href="authorization.html">
+            
+                    
+                    Authorization
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="verification.html">
+            
+                <a href="verification.html">
+            
+                    
+                    Email Verification
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="encryption.html">
+            
+                <a href="encryption.html">
+            
+                    
+                    Encryption
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="hashing.html">
+            
+                <a href="hashing.html">
+            
+                    
+                    Hashing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7" data-path="passwords.html">
+            
+                <a href="passwords.html">
+            
+                    
+                    Password Reset
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" >
+            
+                <span>
+            
+                    
+                    Digging Deeper
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="artisan.html">
+            
+                <a href="artisan.html">
+            
+                    
+                    Artisan Console
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="broadcasting.html">
+            
+                <a href="broadcasting.html">
+            
+                    
+                    Broadcasting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="cache.html">
+            
+                <a href="cache.html">
+            
+                    
+                    Cache
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="collections.html">
+            
+                <a href="collections.html">
+            
+                    
+                    Collections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="events.html">
+            
+                <a href="events.html">
+            
+                    
+                    Events
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="filesystem.html">
+            
+                <a href="filesystem.html">
+            
+                    
+                    File Storage
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="helpers.html">
+            
+                <a href="helpers.html">
+            
+                    
+                    Helpers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.8" data-path="mail.html">
+            
+                <a href="mail.html">
+            
+                    
+                    Mail
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.9" data-path="notifications.html">
+            
+                <a href="notifications.html">
+            
+                    
+                    Notifications
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.10" data-path="packages.html">
+            
+                <a href="packages.html">
+            
+                    
+                    Package Development
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.11" data-path="queues.html">
+            
+                <a href="queues.html">
+            
+                    
+                    Queues
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.12" data-path="scheduling.html">
+            
+                <a href="scheduling.html">
+            
+                    
+                    Task Scheduling
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" >
+            
+                <span>
+            
+                    
+                    Database
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="database.html">
+            
+                <a href="database.html">
+            
+                    
+                    Getting Started
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="queries.html">
+            
+                <a href="queries.html">
+            
+                    
+                    Query Builder
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="pagination.html">
+            
+                <a href="pagination.html">
+            
+                    
+                    Pagination
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="migrations.html">
+            
+                <a href="migrations.html">
+            
+                    
+                    Migrations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="seeding.html">
+            
+                <a href="seeding.html">
+            
+                    
+                    Seeding
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="redis.html">
+            
+                <a href="redis.html">
+            
+                    
+                    Redis
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" >
+            
+                <span>
+            
+                    
+                    Eloquent ORM
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="eloquent.html">
+            
+                <a href="eloquent.html">
+            
+                    
+                    Getting Started
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="eloquent-relationships.html">
+            
+                <a href="eloquent-relationships.html">
+            
+                    
+                    Relationships
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="eloquent-collections.html">
+            
+                <a href="eloquent-collections.html">
+            
+                    
+                    Collections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="eloquent-mutators.html">
+            
+                <a href="eloquent-mutators.html">
+            
+                    
+                    Mutators
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.5" data-path="eloquent-resources.html">
+            
+                <a href="eloquent-resources.html">
+            
+                    
+                    API Resources
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.6" data-path="eloquent-serialization.html">
+            
+                <a href="eloquent-serialization.html">
+            
+                    
+                    Serialization
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" >
+            
+                <span>
+            
+                    
+                    Testing
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="testing.html">
+            
+                <a href="testing.html">
+            
+                    
+                    Getting Started
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="http-tests.html">
+            
+                <a href="http-tests.html">
+            
+                    
+                    HTTP Tests
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="console-tests.html">
+            
+                <a href="console-tests.html">
+            
+                    
+                    Console Tests
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="dusk.html">
+            
+                <a href="dusk.html">
+            
+                    
+                    Browser Tests
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.5" data-path="database-testing.html">
+            
+                <a href="database-testing.html">
+            
+                    
+                    Database
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.6" data-path="mocking.html">
+            
+                <a href="mocking.html">
+            
+                    
+                    Mocking
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" >
+            
+                <span>
+            
+                    
+                    Official Packages
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="billing.html">
+            
+                <a href="billing.html">
+            
+                    
+                    Cashier
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="dusk.html">
+            
+                <a href="dusk.html">
+            
+                    
+                    Dusk
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="envoy.html">
+            
+                <a href="envoy.html">
+            
+                    
+                    Envoy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.4" data-path="horizon.html">
+            
+                <a href="horizon.html">
+            
+                    
+                    Horizon
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.5" data-path="passport.html">
+            
+                <a href="passport.html">
+            
+                    
+                    Passport
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.6" data-path="scout.html">
+            
+                <a href="scout.html">
+            
+                    
+                    Scout
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.7" data-path="socialite.html">
+            
+                <a href="socialite.html">
+            
+                    
+                    Socialite
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.8" data-path="telescope.html">
+            
+                <a href="telescope.html">
+            
+                    
+                    Telescope
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Controllers</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="controllers">Controllers</h1>
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#writing-controllers">Writing Controllers</a><ul>
+<li><a href="#basic-controllers">Basic Controllers</a></li>
+<li><a href="#single-action-controllers">Single Action Controllers</a></li>
+</ul>
+</li>
+<li><a href="#controller-middleware">Controller Middleware</a></li>
+<li><a href="#resource-controllers">Resource Controllers</a><ul>
+<li><a href="#restful-partial-resource-routes">Partial Resource Routes</a></li>
+<li><a href="#restful-nested-resources">Nested Resources</a></li>
+<li><a href="#restful-naming-resource-routes">Naming Resource Routes</a></li>
+<li><a href="#restful-naming-resource-route-parameters">Naming Resource Route Parameters</a></li>
+<li><a href="#restful-scoping-resource-routes">Scoping Resource Routes</a></li>
+<li><a href="#restful-localizing-resource-uris">Localizing Resource URIs</a></li>
+<li><a href="#restful-supplementing-resource-controllers">Supplementing Resource Controllers</a></li>
+</ul>
+</li>
+<li><a href="#dependency-injection-and-controllers">Dependency Injection &amp; Controllers</a></li>
+</ul>
+<p><a name="introduction"></a></p>
+<h2 id="introduction">Introduction</h2>
+<p>Instead of defining all of your request handling logic as closures in your route files, you may wish to organize this behavior using &quot;controller&quot; classes. Controllers can group related request handling logic into a single class. For example, a <code>UserController</code> class might handle all incoming requests related to users, including showing, creating, updating, and deleting users. By default, controllers are stored in the <code>app/Http/Controllers</code> directory.</p>
+<p><a name="writing-controllers"></a></p>
+<h2 id="writing-controllers">Writing Controllers</h2>
+<p><a name="basic-controllers"></a></p>
+<h3 id="basic-controllers">Basic Controllers</h3>
+<p>Let&apos;s take a look at an example of a basic controller. Note that the controller extends the base controller class included with Laravel: <code>App\Http\Controllers\Controller</code>:</p>
+<pre class="language-"><code>&lt;?php
+
+namespace App\Http\Controllers;
+
+use App\Http\Controllers\Controller;
+use App\Models\User;
+
+class UserController extends Controller
+{
+    /**
+     * Show the profile for a given user.
+     *
+     * @param  int  $id
+     * @return \Illuminate\View\View
+     */
+    public function show($id)
+    {
+        return view(&apos;user.profile&apos;, [
+            &apos;user&apos; =&gt; User::findOrFail($id)
+        ]);
+    }
+}
+</code></pre><p>You can define a route to this controller method like so:</p>
+<pre class="language-"><code>use App\Http\Controllers\UserController;
+
+Route::get(&apos;/user/{id}&apos;, [UserController::class, &apos;show&apos;]);
+</code></pre><p>When an incoming request matches the specified route URI, the <code>show</code> method on the <code>App\Http\Controllers\UserController</code> class will be invoked and the route parameters will be passed to the method.</p>
+<blockquote>
+<p>{tip} Controllers are not <strong>required</strong> to extend a base class. However, you will not have access to convenient features such as the <code>middleware</code> and <code>authorize</code> methods.</p>
+</blockquote>
+<p><a name="single-action-controllers"></a></p>
+<h3 id="single-action-controllers">Single Action Controllers</h3>
+<p>If a controller action is particularly complex, you might find it convenient to dedicate an entire controller class to that single action. To accomplish this, you may define a single <code>__invoke</code> method within the controller:</p>
+<pre class="language-"><code>&lt;?php
+
+namespace App\Http\Controllers;
+
+use App\Http\Controllers\Controller;
+use App\Models\User;
+
+class ProvisionServer extends Controller
+{
+    /**
+     * Provision a new web server.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function __invoke()
+    {
+        // ...
+    }
+}
+</code></pre><p>When registering routes for single action controllers, you do not need to specify a controller method. Instead, you may simply pass the name of the controller to the router:</p>
+<pre class="language-"><code>use App\Http\Controllers\ProvisionServer;
+
+Route::post(&apos;/server&apos;, ProvisionServer::class);
+</code></pre><p>You may generate an invokable controller by using the <code>--invokable</code> option of the <code>make:controller</code> Artisan command:</p>
+<pre class="language-"><code>php artisan make:controller ProvisionServer --invokable
+</code></pre><blockquote>
+<p>{tip} Controller stubs may be customized using <a href="docs/artisan#stub-customization">stub publishing</a>.</p>
+</blockquote>
+<p><a name="controller-middleware"></a></p>
+<h2 id="controller-middleware">Controller Middleware</h2>
+<p><a href="docs/middleware">Middleware</a> may be assigned to the controller&apos;s routes in your route files:</p>
+<pre class="language-"><code>Route::get(&apos;profile&apos;, [UserController::class, &apos;show&apos;])-&gt;middleware(&apos;auth&apos;);
+</code></pre><p>Or, you may find it convenient to specify middleware within your controller&apos;s constructor. Using the <code>middleware</code> method within your controller&apos;s constructor, you can assign middleware to the controller&apos;s actions:</p>
+<pre class="language-"><code>class UserController extends Controller
+{
+    /**
+     * Instantiate a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this-&gt;middleware(&apos;auth&apos;);
+        $this-&gt;middleware(&apos;log&apos;)-&gt;only(&apos;index&apos;);
+        $this-&gt;middleware(&apos;subscribed&apos;)-&gt;except(&apos;store&apos;);
+    }
+}
+</code></pre><p>Controllers also allow you to register middleware using a closure. This provides a convenient way to define an inline middleware for a single controller without defining an entire middleware class:</p>
+<pre class="language-"><code>$this-&gt;middleware(function ($request, $next) {
+    return $next($request);
+});
+</code></pre><p><a name="resource-controllers"></a></p>
+<h2 id="resource-controllers">Resource Controllers</h2>
+<p>If you think of each Eloquent model in your application as a &quot;resource&quot;, it is typical to perform the same sets of actions against each resource in your application. For example, imagine your application contains a <code>Photo</code> model and a <code>Movie</code> model. It is likely that users can create, read, update, or delete these resources.</p>
+<p>Because of this common use case, Laravel resource routing assigns the typical create, read, update, and delete (&quot;CRUD&quot;) routes to a controller with a single line of code. To get started, we can use the <code>make:controller</code> Artisan command&apos;s <code>--resource</code> option to quickly create a controller to handle these actions:</p>
+<pre class="language-"><code>php artisan make:controller PhotoController --resource
+</code></pre><p>This command will generate a controller at <code>app/Http/Controllers/PhotoController.php</code>. The controller will contain a method for each of the available resource operations. Next, you may register a resource route that points to the controller:</p>
+<pre class="language-"><code>use App\Http\Controllers\PhotoController;
+
+Route::resource(&apos;photos&apos;, PhotoController::class);
+</code></pre><p>This single route declaration creates multiple routes to handle a variety of actions on the resource. The generated controller will already have methods stubbed for each of these actions. Remember, you can always get a quick overview of your application&apos;s routes by running the <code>route:list</code> Artisan command.</p>
+<p>You may even register many resource controllers at once by passing an array to the <code>resources</code> method:</p>
+<pre class="language-"><code>Route::resources([
+    &apos;photos&apos; =&gt; PhotoController::class,
+    &apos;posts&apos; =&gt; PostController::class,
+]);
+</code></pre><p><a name="actions-handled-by-resource-controller"></a></p>
+<h4 id="actions-handled-by-resource-controller">Actions Handled By Resource Controller</h4>
+<table>
+<thead>
+<tr>
+<th>Verb</th>
+<th>URI</th>
+<th>Action</th>
+<th>Route Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GET</td>
+<td><code>/photos</code></td>
+<td>index</td>
+<td>photos.index</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><code>/photos/create</code></td>
+<td>create</td>
+<td>photos.create</td>
+</tr>
+<tr>
+<td>POST</td>
+<td><code>/photos</code></td>
+<td>store</td>
+<td>photos.store</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><code>/photos/{photo}</code></td>
+<td>show</td>
+<td>photos.show</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><code>/photos/{photo}/edit</code></td>
+<td>edit</td>
+<td>photos.edit</td>
+</tr>
+<tr>
+<td>PUT/PATCH</td>
+<td><code>/photos/{photo}</code></td>
+<td>update</td>
+<td>photos.update</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td><code>/photos/{photo}</code></td>
+<td>destroy</td>
+<td>photos.destroy</td>
+</tr>
+</tbody>
+</table>
+<p><a name="customizing-missing-model-behavior"></a></p>
+<h4 id="customizing-missing-model-behavior">Customizing Missing Model Behavior</h4>
+<p>Typically, a 404 HTTP response will be generated if an implicitly bound resource model is not found. However, you may customize this behavior by calling the <code>missing</code> method when defining your resource route. The <code>missing</code> method accepts a closure that will be invoked if an implicitly bound model can not be found for any of the resource&apos;s routes:</p>
+<pre class="language-"><code>use App\Http\Controllers\PhotoController;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
+
+Route::resource(&apos;photos&apos;, PhotoController::class)
+        -&gt;missing(function (Request $request) {
+            return Redirect::route(&apos;photos.index&apos;);
+        });
+</code></pre><p><a name="specifying-the-resource-model"></a></p>
+<h4 id="specifying-the-resource-model">Specifying The Resource Model</h4>
+<p>If you are using <a href="docs/routing#route-model-binding">route model binding</a> and would like the resource controller&apos;s methods to type-hint a model instance, you may use the <code>--model</code> option when generating the controller:</p>
+<pre class="language-"><code>php artisan make:controller PhotoController --resource --model=Photo
+</code></pre><p><a name="restful-partial-resource-routes"></a></p>
+<h3 id="partial-resource-routes">Partial Resource Routes</h3>
+<p>When declaring a resource route, you may specify a subset of actions the controller should handle instead of the full set of default actions:</p>
+<pre class="language-"><code>use App\Http\Controllers\PhotoController;
+
+Route::resource(&apos;photos&apos;, PhotoController::class)-&gt;only([
+    &apos;index&apos;, &apos;show&apos;
+]);
+
+Route::resource(&apos;photos&apos;, PhotoController::class)-&gt;except([
+    &apos;create&apos;, &apos;store&apos;, &apos;update&apos;, &apos;destroy&apos;
+]);
+</code></pre><p><a name="api-resource-routes"></a></p>
+<h4 id="api-resource-routes">API Resource Routes</h4>
+<p>When declaring resource routes that will be consumed by APIs, you will commonly want to exclude routes that present HTML templates such as <code>create</code> and <code>edit</code>. For convenience, you may use the <code>apiResource</code> method to automatically exclude these two routes:</p>
+<pre class="language-"><code>use App\Http\Controllers\PhotoController;
+
+Route::apiResource(&apos;photos&apos;, PhotoController::class);
+</code></pre><p>You may register many API resource controllers at once by passing an array to the <code>apiResources</code> method:</p>
+<pre class="language-"><code>use App\Http\Controllers\PhotoController;
+use App\Http\Controllers\PostController;
+
+Route::apiResources([
+    &apos;photos&apos; =&gt; PhotoController::class,
+    &apos;posts&apos; =&gt; PostController::class,
+]);
+</code></pre><p>To quickly generate an API resource controller that does not include the <code>create</code> or <code>edit</code> methods, use the <code>--api</code> switch when executing the <code>make:controller</code> command:</p>
+<pre class="language-"><code>php artisan make:controller PhotoController --api
+</code></pre><p><a name="restful-nested-resources"></a></p>
+<h3 id="nested-resources">Nested Resources</h3>
+<p>Sometimes you may need to define routes to a nested resource. For example, a photo resource may have multiple comments that may be attached to the photo. To nest the resource controllers, you may use &quot;dot&quot; notation in your route declaration:</p>
+<pre class="language-"><code>use App\Http\Controllers\PhotoCommentController;
+
+Route::resource(&apos;photos.comments&apos;, PhotoCommentController::class);
+</code></pre><p>This route will register a nested resource that may be accessed with URIs like the following:</p>
+<pre class="language-"><code>/photos/{photo}/comments/{comment}
+</code></pre><p><a name="scoping-nested-resources"></a></p>
+<h4 id="scoping-nested-resources">Scoping Nested Resources</h4>
+<p>Laravel&apos;s <a href="docs/routing#implicit-model-binding-scoping">implicit model binding</a> feature can automatically scope nested bindings such that the resolved child model is confirmed to belong to the parent model. By using the <code>scoped</code> method when defining your nested resource, you may enable automatic scoping as well as instruct Laravel which field the child resource should be retrieved by. For more information on how to accomplish this, please see the documentation on <a href="#restful-scoping-resource-routes">scoping resource routes</a>.</p>
+<p><a name="shallow-nesting"></a></p>
+<h4 id="shallow-nesting">Shallow Nesting</h4>
+<p>Often, it is not entirely necessary to have both the parent and the child IDs within a URI since the child ID is already a unique identifier. When using unique identifiers such as auto-incrementing primary keys to identify your models in URI segments, you may choose to use &quot;shallow nesting&quot;:</p>
+<pre class="language-"><code>use App\Http\Controllers\CommentController;
+
+Route::resource(&apos;photos.comments&apos;, CommentController::class)-&gt;shallow();
+</code></pre><p>This route definition will define the following routes:</p>
+<table>
+<thead>
+<tr>
+<th>Verb</th>
+<th>URI</th>
+<th>Action</th>
+<th>Route Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GET</td>
+<td><code>/photos/{photo}/comments</code></td>
+<td>index</td>
+<td>photos.comments.index</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><code>/photos/{photo}/comments/create</code></td>
+<td>create</td>
+<td>photos.comments.create</td>
+</tr>
+<tr>
+<td>POST</td>
+<td><code>/photos/{photo}/comments</code></td>
+<td>store</td>
+<td>photos.comments.store</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><code>/comments/{comment}</code></td>
+<td>show</td>
+<td>comments.show</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><code>/comments/{comment}/edit</code></td>
+<td>edit</td>
+<td>comments.edit</td>
+</tr>
+<tr>
+<td>PUT/PATCH</td>
+<td><code>/comments/{comment}</code></td>
+<td>update</td>
+<td>comments.update</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td><code>/comments/{comment}</code></td>
+<td>destroy</td>
+<td>comments.destroy</td>
+</tr>
+</tbody>
+</table>
+<p><a name="restful-naming-resource-routes"></a></p>
+<h3 id="naming-resource-routes">Naming Resource Routes</h3>
+<p>By default, all resource controller actions have a route name; however, you can override these names by passing a <code>names</code> array with your desired route names:</p>
+<pre class="language-"><code>use App\Http\Controllers\PhotoController;
+
+Route::resource(&apos;photos&apos;, PhotoController::class)-&gt;names([
+    &apos;create&apos; =&gt; &apos;photos.build&apos;
+]);
+</code></pre><p><a name="restful-naming-resource-route-parameters"></a></p>
+<h3 id="naming-resource-route-parameters">Naming Resource Route Parameters</h3>
+<p>By default, <code>Route::resource</code> will create the route parameters for your resource routes based on the &quot;singularized&quot; version of the resource name. You can easily override this on a per resource basis using the <code>parameters</code> method. The array passed into the <code>parameters</code> method should be an associative array of resource names and parameter names:</p>
+<pre class="language-"><code>use App\Http\Controllers\AdminUserController;
+
+Route::resource(&apos;users&apos;, AdminUserController::class)-&gt;parameters([
+    &apos;users&apos; =&gt; &apos;admin_user&apos;
+]);
+</code></pre><p> The example above generates the following URI for the resource&apos;s <code>show</code> route:</p>
+<pre class="language-"><code>/users/{admin_user}
+</code></pre><p><a name="restful-scoping-resource-routes"></a></p>
+<h3 id="scoping-resource-routes">Scoping Resource Routes</h3>
+<p>Laravel&apos;s <a href="docs/routing#implicit-model-binding-scoping">scoped implicit model binding</a> feature can automatically scope nested bindings such that the resolved child model is confirmed to belong to the parent model. By using the <code>scoped</code> method when defining your nested resource, you may enable automatic scoping as well as instruct Laravel which field the child resource should be retrieved by:</p>
+<pre class="language-"><code>use App\Http\Controllers\PhotoCommentController;
+
+Route::resource(&apos;photos.comments&apos;, PhotoCommentController::class)-&gt;scoped([
+    &apos;comment&apos; =&gt; &apos;slug&apos;,
+]);
+</code></pre><p>This route will register a scoped nested resource that may be accessed with URIs like the following:</p>
+<pre class="language-"><code>/photos/{photo}/comments/{comment:slug}
+</code></pre><p>When using a custom keyed implicit binding as a nested route parameter, Laravel will automatically scope the query to retrieve the nested model by its parent using conventions to guess the relationship name on the parent. In this case, it will be assumed that the <code>Photo</code> model has a relationship named <code>comments</code> (the plural of the route parameter name) which can be used to retrieve the <code>Comment</code> model.</p>
+<p><a name="restful-localizing-resource-uris"></a></p>
+<h3 id="localizing-resource-uris">Localizing Resource URIs</h3>
+<p>By default, <code>Route::resource</code> will create resource URIs using English verbs. If you need to localize the <code>create</code> and <code>edit</code> action verbs, you may use the <code>Route::resourceVerbs</code> method. This may be done at the beginning of the <code>boot</code> method within your application&apos;s <code>App\Providers\RouteServiceProvider</code>:</p>
+<pre class="language-"><code>/**
+ * Define your route model bindings, pattern filters, etc.
+ *
+ * @return void
+ */
+public function boot()
+{
+    Route::resourceVerbs([
+        &apos;create&apos; =&gt; &apos;crear&apos;,
+        &apos;edit&apos; =&gt; &apos;editar&apos;,
+    ]);
+
+    // ...
+}
+</code></pre><p>Once the verbs have been customized, a resource route registration such as <code>Route::resource(&apos;fotos&apos;, PhotoController::class)</code> will produce the following URIs:</p>
+<pre class="language-"><code>/fotos/crear
+
+/fotos/{foto}/editar
+</code></pre><p><a name="restful-supplementing-resource-controllers"></a></p>
+<h3 id="supplementing-resource-controllers">Supplementing Resource Controllers</h3>
+<p>If you need to add additional routes to a resource controller beyond the default set of resource routes, you should define those routes before your call to the <code>Route::resource</code> method; otherwise, the routes defined by the <code>resource</code> method may unintentionally take precedence over your supplemental routes:</p>
+<pre class="language-"><code>use App\Http\Controller\PhotoController;
+
+Route::get(&apos;/photos/popular&apos;, [PhotoController::class, &apos;popular&apos;]);
+Route::resource(&apos;photos&apos;, PhotoController::class);
+</code></pre><blockquote>
+<p>{tip} Remember to keep your controllers focused. If you find yourself routinely needing methods outside of the typical set of resource actions, consider splitting your controller into two, smaller controllers.</p>
+</blockquote>
+<p><a name="dependency-injection-and-controllers"></a></p>
+<h2 id="dependency-injection--controllers">Dependency Injection &amp; Controllers</h2>
+<p><a name="constructor-injection"></a></p>
+<h4 id="constructor-injection">Constructor Injection</h4>
+<p>The Laravel <a href="docs/container">service container</a> is used to resolve all Laravel controllers. As a result, you are able to type-hint any dependencies your controller may need in its constructor. The declared dependencies will automatically be resolved and injected into the controller instance:</p>
+<pre class="language-"><code>&lt;?php
+
+namespace App\Http\Controllers;
+
+use App\Repositories\UserRepository;
+
+class UserController extends Controller
+{
+    /**
+     * The user repository instance.
+     */
+    protected $users;
+
+    /**
+     * Create a new controller instance.
+     *
+     * @param  \App\Repositories\UserRepository  $users
+     * @return void
+     */
+    public function __construct(UserRepository $users)
+    {
+        $this-&gt;users = $users;
+    }
+}
+</code></pre><p><a name="method-injection"></a></p>
+<h4 id="method-injection">Method Injection</h4>
+<p>In addition to constructor injection, you may also type-hint dependencies on your controller&apos;s methods. A common use-case for method injection is injecting the <code>Illuminate\Http\Request</code> instance into your controller methods:</p>
+<pre class="language-"><code>&lt;?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+
+class UserController extends Controller
+{
+    /**
+     * Store a new user.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
+        $name = $request-&gt;name;
+
+        //
+    }
+}
+</code></pre><p>If your controller method is also expecting input from a route parameter, list your route arguments after your other dependencies. For example, if your route is defined like so:</p>
+<pre class="language-"><code>use App\Http\Controllers\UserController;
+
+Route::put(&apos;/user/{id}&apos;, [UserController::class, &apos;update&apos;]);
+</code></pre><p>You may still type-hint the <code>Illuminate\Http\Request</code> and access your <code>id</code> parameter by defining your controller method as follows:</p>
+<pre class="language-"><code>&lt;?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+
+class UserController extends Controller
+{
+    /**
+     * Update the given user.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  string  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, $id)
+    {
+        //
+    }
+}
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="csrf.html" class="navigation navigation-prev " aria-label="Previous page: CSRF Protection">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="requests.html" class="navigation navigation-next " aria-label="Next page: Requests">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Controllers","level":"1.5.4","depth":2,"next":{"title":"Requests","level":"1.5.5","depth":2,"path":"requests.md","ref":"requests.md","articles":[]},"previous":{"title":"CSRF Protection","level":"1.5.3","depth":2,"path":"csrf.md","ref":"csrf.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-highlight","-livereload","prism"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-solarizedlight.css"]},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Laravel 英文文档","language":"us-en","links":{"sidebar":{"Home":"https://docs.khs1994.com"}},"gitbook":"*"},"file":{"path":"controllers.md","mtime":"2021-05-20T00:16:11.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-05-20T00:17:09.960Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

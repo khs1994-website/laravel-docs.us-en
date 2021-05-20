@@ -1,0 +1,1721 @@
+
+<!DOCTYPE HTML>
+<html lang="us-en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Logging · Laravel 英文文档</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="errors.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://docs.khs1994.com" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    Prologue
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="releases.html">
+            
+                <a href="releases.html">
+            
+                    
+                    Release Notes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="upgrade.html">
+            
+                <a href="upgrade.html">
+            
+                    
+                    Upgrade Guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="contributions.html">
+            
+                <a href="contributions.html">
+            
+                    
+                    Contribution Guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    Getting Started
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="installation.html">
+            
+                <a href="installation.html">
+            
+                    
+                    Installation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="configuration.html">
+            
+                <a href="configuration.html">
+            
+                    
+                    Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="structure.html">
+            
+                <a href="structure.html">
+            
+                    
+                    Directory Structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="homestead.html">
+            
+                <a href="homestead.html">
+            
+                    
+                    Homestead
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="valet.html">
+            
+                <a href="valet.html">
+            
+                    
+                    Valet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="deployment.html">
+            
+                <a href="deployment.html">
+            
+                    
+                    Deployment
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    Architecture Concepts
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="lifecycle.html">
+            
+                <a href="lifecycle.html">
+            
+                    
+                    Request Lifecycle
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="container.html">
+            
+                <a href="container.html">
+            
+                    
+                    Service Container
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="providers.html">
+            
+                <a href="providers.html">
+            
+                    
+                    Service Providers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="facades.html">
+            
+                <a href="facades.html">
+            
+                    
+                    Facades
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="contracts.html">
+            
+                <a href="contracts.html">
+            
+                    
+                    Contracts
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    The Basics
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="routing.html">
+            
+                <a href="routing.html">
+            
+                    
+                    Routing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="middleware.html">
+            
+                <a href="middleware.html">
+            
+                    
+                    Middleware
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="csrf.html">
+            
+                <a href="csrf.html">
+            
+                    
+                    CSRF Protection
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="controllers.html">
+            
+                <a href="controllers.html">
+            
+                    
+                    Controllers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="requests.html">
+            
+                <a href="requests.html">
+            
+                    
+                    Requests
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="responses.html">
+            
+                <a href="responses.html">
+            
+                    
+                    Responses
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="views.html">
+            
+                <a href="views.html">
+            
+                    
+                    Views
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="urls.html">
+            
+                <a href="urls.html">
+            
+                    
+                    URL Generation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="session.html">
+            
+                <a href="session.html">
+            
+                    
+                    Session
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.10" data-path="validation.html">
+            
+                <a href="validation.html">
+            
+                    
+                    Validation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.11" data-path="errors.html">
+            
+                <a href="errors.html">
+            
+                    
+                    Error Handling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.12" data-path="logging.html">
+            
+                <a href="logging.html">
+            
+                    
+                    Logging
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    Frontend
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="blade.html">
+            
+                <a href="blade.html">
+            
+                    
+                    Blade Templates
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="localization.html">
+            
+                <a href="localization.html">
+            
+                    
+                    Localization
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="frontend.md">
+            
+                <span>
+            
+                    
+                    Frontend Scaffolding
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="mix.html">
+            
+                <a href="mix.html">
+            
+                    
+                    Compiling Assets
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    Security
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="authentication.html">
+            
+                <a href="authentication.html">
+            
+                    
+                    Authentication
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="api-authentication.md">
+            
+                <span>
+            
+                    
+                    API Authentication
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="authorization.html">
+            
+                <a href="authorization.html">
+            
+                    
+                    Authorization
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="verification.html">
+            
+                <a href="verification.html">
+            
+                    
+                    Email Verification
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="encryption.html">
+            
+                <a href="encryption.html">
+            
+                    
+                    Encryption
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="hashing.html">
+            
+                <a href="hashing.html">
+            
+                    
+                    Hashing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7" data-path="passwords.html">
+            
+                <a href="passwords.html">
+            
+                    
+                    Password Reset
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" >
+            
+                <span>
+            
+                    
+                    Digging Deeper
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="artisan.html">
+            
+                <a href="artisan.html">
+            
+                    
+                    Artisan Console
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="broadcasting.html">
+            
+                <a href="broadcasting.html">
+            
+                    
+                    Broadcasting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="cache.html">
+            
+                <a href="cache.html">
+            
+                    
+                    Cache
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="collections.html">
+            
+                <a href="collections.html">
+            
+                    
+                    Collections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="events.html">
+            
+                <a href="events.html">
+            
+                    
+                    Events
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="filesystem.html">
+            
+                <a href="filesystem.html">
+            
+                    
+                    File Storage
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="helpers.html">
+            
+                <a href="helpers.html">
+            
+                    
+                    Helpers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.8" data-path="mail.html">
+            
+                <a href="mail.html">
+            
+                    
+                    Mail
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.9" data-path="notifications.html">
+            
+                <a href="notifications.html">
+            
+                    
+                    Notifications
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.10" data-path="packages.html">
+            
+                <a href="packages.html">
+            
+                    
+                    Package Development
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.11" data-path="queues.html">
+            
+                <a href="queues.html">
+            
+                    
+                    Queues
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.12" data-path="scheduling.html">
+            
+                <a href="scheduling.html">
+            
+                    
+                    Task Scheduling
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" >
+            
+                <span>
+            
+                    
+                    Database
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="database.html">
+            
+                <a href="database.html">
+            
+                    
+                    Getting Started
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="queries.html">
+            
+                <a href="queries.html">
+            
+                    
+                    Query Builder
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="pagination.html">
+            
+                <a href="pagination.html">
+            
+                    
+                    Pagination
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="migrations.html">
+            
+                <a href="migrations.html">
+            
+                    
+                    Migrations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="seeding.html">
+            
+                <a href="seeding.html">
+            
+                    
+                    Seeding
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="redis.html">
+            
+                <a href="redis.html">
+            
+                    
+                    Redis
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" >
+            
+                <span>
+            
+                    
+                    Eloquent ORM
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="eloquent.html">
+            
+                <a href="eloquent.html">
+            
+                    
+                    Getting Started
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="eloquent-relationships.html">
+            
+                <a href="eloquent-relationships.html">
+            
+                    
+                    Relationships
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="eloquent-collections.html">
+            
+                <a href="eloquent-collections.html">
+            
+                    
+                    Collections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="eloquent-mutators.html">
+            
+                <a href="eloquent-mutators.html">
+            
+                    
+                    Mutators
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.5" data-path="eloquent-resources.html">
+            
+                <a href="eloquent-resources.html">
+            
+                    
+                    API Resources
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.6" data-path="eloquent-serialization.html">
+            
+                <a href="eloquent-serialization.html">
+            
+                    
+                    Serialization
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" >
+            
+                <span>
+            
+                    
+                    Testing
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="testing.html">
+            
+                <a href="testing.html">
+            
+                    
+                    Getting Started
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="http-tests.html">
+            
+                <a href="http-tests.html">
+            
+                    
+                    HTTP Tests
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="console-tests.html">
+            
+                <a href="console-tests.html">
+            
+                    
+                    Console Tests
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="dusk.html">
+            
+                <a href="dusk.html">
+            
+                    
+                    Browser Tests
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.5" data-path="database-testing.html">
+            
+                <a href="database-testing.html">
+            
+                    
+                    Database
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.6" data-path="mocking.html">
+            
+                <a href="mocking.html">
+            
+                    
+                    Mocking
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" >
+            
+                <span>
+            
+                    
+                    Official Packages
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="billing.html">
+            
+                <a href="billing.html">
+            
+                    
+                    Cashier
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="dusk.html">
+            
+                <a href="dusk.html">
+            
+                    
+                    Dusk
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="envoy.html">
+            
+                <a href="envoy.html">
+            
+                    
+                    Envoy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.4" data-path="horizon.html">
+            
+                <a href="horizon.html">
+            
+                    
+                    Horizon
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.5" data-path="passport.html">
+            
+                <a href="passport.html">
+            
+                    
+                    Passport
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.6" data-path="scout.html">
+            
+                <a href="scout.html">
+            
+                    
+                    Scout
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.7" data-path="socialite.html">
+            
+                <a href="socialite.html">
+            
+                    
+                    Socialite
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.8" data-path="telescope.html">
+            
+                <a href="telescope.html">
+            
+                    
+                    Telescope
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Logging</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="logging">Logging</h1>
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#configuration">Configuration</a><ul>
+<li><a href="#available-channel-drivers">Available Channel Drivers</a></li>
+<li><a href="#channel-prerequisites">Channel Prerequisites</a></li>
+</ul>
+</li>
+<li><a href="#building-log-stacks">Building Log Stacks</a></li>
+<li><a href="#writing-log-messages">Writing Log Messages</a><ul>
+<li><a href="#writing-to-specific-channels">Writing To Specific Channels</a></li>
+</ul>
+</li>
+<li><a href="#monolog-channel-customization">Monolog Channel Customization</a><ul>
+<li><a href="#customizing-monolog-for-channels">Customizing Monolog For Channels</a></li>
+<li><a href="#creating-monolog-handler-channels">Creating Monolog Handler Channels</a></li>
+<li><a href="#creating-custom-channels-via-factories">Creating Custom Channels Via Factories</a></li>
+</ul>
+</li>
+</ul>
+<p><a name="introduction"></a></p>
+<h2 id="introduction">Introduction</h2>
+<p>To help you learn more about what&apos;s happening within your application, Laravel provides robust logging services that allow you to log messages to files, the system error log, and even to Slack to notify your entire team.</p>
+<p>Laravel logging is based on &quot;channels&quot;. Each channel represents a specific way of writing log information. For example, the <code>single</code> channel writes log files to a single log file, while the <code>slack</code> channel sends log messages to Slack. Log messages may be written to multiple channels based on their severity.</p>
+<p>Under the hood, Laravel utilizes the <a href="https://github.com/Seldaek/monolog" target="_blank">Monolog</a> library, which provides support for a variety of powerful log handlers. Laravel makes it a cinch to configure these handlers, allowing you to mix and match them to customize your application&apos;s log handling.</p>
+<p><a name="configuration"></a></p>
+<h2 id="configuration">Configuration</h2>
+<p>All of the configuration options for your application&apos;s logging behavior is housed in the <code>config/logging.php</code> configuration file. This file allows you to configure your application&apos;s log channels, so be sure to review each of the available channels and their options. We&apos;ll review a few common options below.</p>
+<p>By default, Laravel will use the <code>stack</code> channel when logging messages. The <code>stack</code> channel is used to aggregate multiple log channels into a single channel. For more information on building stacks, check out the <a href="#building-log-stacks">documentation below</a>.</p>
+<p><a name="configuring-the-channel-name"></a></p>
+<h4 id="configuring-the-channel-name">Configuring The Channel Name</h4>
+<p>By default, Monolog is instantiated with a &quot;channel name&quot; that matches the current environment, such as <code>production</code> or <code>local</code>. To change this value, add a <code>name</code> option to your channel&apos;s configuration:</p>
+<pre class="language-"><code>&apos;stack&apos; =&gt; [
+    &apos;driver&apos; =&gt; &apos;stack&apos;,
+    &apos;name&apos; =&gt; &apos;channel-name&apos;,
+    &apos;channels&apos; =&gt; [&apos;single&apos;, &apos;slack&apos;],
+],
+</code></pre><p><a name="available-channel-drivers"></a></p>
+<h3 id="available-channel-drivers">Available Channel Drivers</h3>
+<p>Each log channel is powered by a &quot;driver&quot;. The driver determines how and where the log message is actually recorded. The following log channel drivers are available in every Laravel application. An entry for most of these drivers is already present in your application&apos;s <code>config/logging.php</code> configuration file, so be sure to review this file to become familiar with its contents:</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>custom</code></td>
+<td>A driver that calls a specified factory to create a channel</td>
+</tr>
+<tr>
+<td><code>daily</code></td>
+<td>A <code>RotatingFileHandler</code> based Monolog driver which rotates daily</td>
+</tr>
+<tr>
+<td><code>errorlog</code></td>
+<td>A <code>ErrorLogHandler</code> based Monolog driver</td>
+</tr>
+<tr>
+<td><code>monolog</code></td>
+<td>A Monolog factory driver that may use any supported Monolog handler</td>
+</tr>
+<tr>
+<td><code>null</code></td>
+<td>A driver that discards all log messages</td>
+</tr>
+<tr>
+<td><code>papertrail</code></td>
+<td>A <code>SyslogUdpHandler</code> based Monolog driver</td>
+</tr>
+<tr>
+<td><code>single</code></td>
+<td>A single file or path based logger channel (<code>StreamHandler</code>)</td>
+</tr>
+<tr>
+<td><code>slack</code></td>
+<td>A <code>SlackWebhookHandler</code> based Monolog driver</td>
+</tr>
+<tr>
+<td><code>stack</code></td>
+<td>A wrapper to facilitate creating &quot;multi-channel&quot; channels</td>
+</tr>
+<tr>
+<td><code>syslog</code></td>
+<td>A <code>SyslogHandler</code> based Monolog driver</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>{tip} Check out the documentation on <a href="#monolog-channel-customization">advanced channel customization</a> to learn more about the <code>monolog</code> and <code>custom</code> drivers.</p>
+</blockquote>
+<p><a name="channel-prerequisites"></a></p>
+<h3 id="channel-prerequisites">Channel Prerequisites</h3>
+<p><a name="configuring-the-single-and-daily-channels"></a></p>
+<h4 id="configuring-the-single-and-daily-channels">Configuring The Single and Daily Channels</h4>
+<p>The <code>single</code> and <code>daily</code> channels have three optional configuration options: <code>bubble</code>, <code>permission</code>, and <code>locking</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>bubble</code></td>
+<td>Indicates if messages should bubble up to other channels after being handled</td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td><code>locking</code></td>
+<td>Attempt to lock the log file before writing to it</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>permission</code></td>
+<td>The log file&apos;s permissions</td>
+<td><code>0644</code></td>
+</tr>
+</tbody>
+</table>
+<p><a name="configuring-the-papertrail-channel"></a></p>
+<h4 id="configuring-the-papertrail-channel">Configuring The Papertrail Channel</h4>
+<p>The <code>papertrail</code> channel requires the <code>host</code> and <code>port</code> configuration options. You can obtain these values from <a href="https://help.papertrailapp.com/kb/configuration/configuring-centralized-logging-from-php-apps/#send-events-from-php-app" target="_blank">Papertrail</a>.</p>
+<p><a name="configuring-the-slack-channel"></a></p>
+<h4 id="configuring-the-slack-channel">Configuring The Slack Channel</h4>
+<p>The <code>slack</code> channel requires a <code>url</code> configuration option. This URL should match a URL for an <a href="https://slack.com/apps/A0F7XDUAZ-incoming-webhooks" target="_blank">incoming webhook</a> that you have configured for your Slack team.</p>
+<p>By default, Slack will only receive logs at the <code>critical</code> level and above; however, you can adjust this in your <code>config/logging.php</code> configuration file by modifying the <code>level</code> configuration option within your Slack log channel&apos;s configuration array.</p>
+<p><a name="building-log-stacks"></a></p>
+<h2 id="building-log-stacks">Building Log Stacks</h2>
+<p>As mentioned previously, the <code>stack</code> driver allows you to combine multiple channels into a single log channel for convenience. To illustrate how to use log stacks, let&apos;s take a look at an example configuration that you might see in a production application:</p>
+<pre class="language-"><code>&apos;channels&apos; =&gt; [
+    &apos;stack&apos; =&gt; [
+        &apos;driver&apos; =&gt; &apos;stack&apos;,
+        &apos;channels&apos; =&gt; [&apos;syslog&apos;, &apos;slack&apos;],
+    ],
+
+    &apos;syslog&apos; =&gt; [
+        &apos;driver&apos; =&gt; &apos;syslog&apos;,
+        &apos;level&apos; =&gt; &apos;debug&apos;,
+    ],
+
+    &apos;slack&apos; =&gt; [
+        &apos;driver&apos; =&gt; &apos;slack&apos;,
+        &apos;url&apos; =&gt; env(&apos;LOG_SLACK_WEBHOOK_URL&apos;),
+        &apos;username&apos; =&gt; &apos;Laravel Log&apos;,
+        &apos;emoji&apos; =&gt; &apos;:boom:&apos;,
+        &apos;level&apos; =&gt; &apos;critical&apos;,
+    ],
+],
+</code></pre><p>Let&apos;s dissect this configuration. First, notice our <code>stack</code> channel aggregates two other channels via its <code>channels</code> option: <code>syslog</code> and <code>slack</code>. So, when logging messages, both of these channels will have the opportunity to log the message. However, as we will see below, whether these channels actually log the message may be determined by the message&apos;s severity / &quot;level&quot;.</p>
+<p><a name="log-levels"></a></p>
+<h4 id="log-levels">Log Levels</h4>
+<p>Take note of the <code>level</code> configuration option present on the <code>syslog</code> and <code>slack</code> channel configurations in the example above. This option determines the minimum &quot;level&quot; a message must be in order to be logged by the channel. Monolog, which powers Laravel&apos;s logging services, offers all of the log levels defined in the <a href="https://tools.ietf.org/html/rfc5424" target="_blank">RFC 5424 specification</a>: <strong>emergency</strong>, <strong>alert</strong>, <strong>critical</strong>, <strong>error</strong>, <strong>warning</strong>, <strong>notice</strong>, <strong>info</strong>, and <strong>debug</strong>.</p>
+<p>So, imagine we log a message using the <code>debug</code> method:</p>
+<pre class="language-"><code>Log::debug(&apos;An informational message.&apos;);
+</code></pre><p>Given our configuration, the <code>syslog</code> channel will write the message to the system log; however, since the error message is not <code>critical</code> or above, it will not be sent to Slack. However, if we log an <code>emergency</code> message, it will be sent to both the system log and Slack since the <code>emergency</code> level is above our minimum level threshold for both channels:</p>
+<pre class="language-"><code>Log::emergency(&apos;The system is down!&apos;);
+</code></pre><p><a name="writing-log-messages"></a></p>
+<h2 id="writing-log-messages">Writing Log Messages</h2>
+<p>You may write information to the logs using the <code>Log</code> <a href="docs/facades">facade</a>. As previously mentioned, the logger provides the eight logging levels defined in the <a href="https://tools.ietf.org/html/rfc5424" target="_blank">RFC 5424 specification</a>: <strong>emergency</strong>, <strong>alert</strong>, <strong>critical</strong>, <strong>error</strong>, <strong>warning</strong>, <strong>notice</strong>, <strong>info</strong> and <strong>debug</strong>:</p>
+<pre class="language-"><code>use Illuminate\Support\Facades\Log;
+
+Log::emergency($message);
+Log::alert($message);
+Log::critical($message);
+Log::error($message);
+Log::warning($message);
+Log::notice($message);
+Log::info($message);
+Log::debug($message);
+</code></pre><p>You may call any of these methods to log a message for the corresponding level. By default, the message will be written to the default log channel as configured by your <code>logging</code> configuration file:</p>
+<pre class="language-"><code>&lt;?php
+
+namespace App\Http\Controllers;
+
+use App\Http\Controllers\Controller;
+use App\Models\User;
+use Illuminate\Support\Facades\Log;
+
+class UserController extends Controller
+{
+    /**
+     * Show the profile for the given user.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
+    {
+        Log::info(&apos;Showing the user profile for user: &apos;.$id);
+
+        return view(&apos;user.profile&apos;, [
+            &apos;user&apos; =&gt; User::findOrFail($id)
+        ]);
+    }
+}
+</code></pre><p><a name="contextual-information"></a></p>
+<h4 id="contextual-information">Contextual Information</h4>
+<p>An array of contextual data may also be passed to the log methods. This contextual data will be formatted and displayed with the log message:</p>
+<pre class="language-"><code>Log::info(&apos;User failed to login.&apos;, [&apos;id&apos; =&gt; $user-&gt;id]);
+</code></pre><p><a name="writing-to-specific-channels"></a></p>
+<h3 id="writing-to-specific-channels">Writing To Specific Channels</h3>
+<p>Sometimes you may wish to log a message to a channel other than your application&apos;s default channel. You may use the <code>channel</code> method on the <code>Log</code> facade to retrieve and log to any channel defined in your configuration file:</p>
+<pre class="language-"><code>use Illuminate\Support\Facades\Log;
+
+Log::channel(&apos;slack&apos;)-&gt;info(&apos;Something happened!&apos;);
+</code></pre><p>If you would like to create an on-demand logging stack consisting of multiple channels, you may use the <code>stack</code> method:</p>
+<pre class="language-"><code>Log::stack([&apos;single&apos;, &apos;slack&apos;])-&gt;info(&apos;Something happened!&apos;);
+</code></pre><p><a name="monolog-channel-customization"></a></p>
+<h2 id="monolog-channel-customization">Monolog Channel Customization</h2>
+<p><a name="customizing-monolog-for-channels"></a></p>
+<h3 id="customizing-monolog-for-channels">Customizing Monolog For Channels</h3>
+<p>Sometimes you may need complete control over how Monolog is configured for an existing channel. For example, you may want to configure a custom Monolog <code>FormatterInterface</code> implementation for Laravel&apos;s built-in <code>single</code> channel.</p>
+<p>To get started, define a <code>tap</code> array on the channel&apos;s configuration. The <code>tap</code> array should contain a list of classes that should have an opportunity to customize (or &quot;tap&quot; into) the Monolog instance after it is created. There is no conventional location where these classes should be placed, so you are free to create a directory within your application to contain these classes:</p>
+<pre class="language-"><code>&apos;single&apos; =&gt; [
+    &apos;driver&apos; =&gt; &apos;single&apos;,
+    &apos;tap&apos; =&gt; [App\Logging\CustomizeFormatter::class],
+    &apos;path&apos; =&gt; storage_path(&apos;logs/laravel.log&apos;),
+    &apos;level&apos; =&gt; &apos;debug&apos;,
+],
+</code></pre><p>Once you have configured the <code>tap</code> option on your channel, you&apos;re ready to define the class that will customize your Monolog instance. This class only needs a single method: <code>__invoke</code>, which receives an <code>Illuminate\Log\Logger</code> instance. The <code>Illuminate\Log\Logger</code> instance proxies all method calls to the underlying Monolog instance:</p>
+<pre class="language-"><code>&lt;?php
+
+namespace App\Logging;
+
+use Monolog\Formatter\LineFormatter;
+
+class CustomizeFormatter
+{
+    /**
+     * Customize the given logger instance.
+     *
+     * @param  \Illuminate\Log\Logger  $logger
+     * @return void
+     */
+    public function __invoke($logger)
+    {
+        foreach ($logger-&gt;getHandlers() as $handler) {
+            $handler-&gt;setFormatter(new LineFormatter(
+                &apos;[%datetime%] %channel%.%level_name%: %message% %context% %extra%&apos;
+            ));
+        }
+    }
+}
+</code></pre><blockquote>
+<p>{tip} All of your &quot;tap&quot; classes are resolved by the <a href="docs/container">service container</a>, so any constructor dependencies they require will automatically be injected.</p>
+</blockquote>
+<p><a name="creating-monolog-handler-channels"></a></p>
+<h3 id="creating-monolog-handler-channels">Creating Monolog Handler Channels</h3>
+<p>Monolog has a variety of <a href="https://github.com/Seldaek/monolog/tree/master/src/Monolog/Handler" target="_blank">available handlers</a> and Laravel does not include a built-in channel for each one. In some cases, you may wish to create a custom channel that is merely an instance of a specific Monolog handler that does not have a corresponding Laravel log driver.  These channels can be easily created using the <code>monolog</code> driver.</p>
+<p>When using the <code>monolog</code> driver, the <code>handler</code> configuration option is used to specify which handler will be instantiated. Optionally, any constructor parameters the handler needs may be specified using the <code>with</code> configuration option:</p>
+<pre class="language-"><code>&apos;logentries&apos; =&gt; [
+    &apos;driver&apos;  =&gt; &apos;monolog&apos;,
+    &apos;handler&apos; =&gt; Monolog\Handler\SyslogUdpHandler::class,
+    &apos;with&apos; =&gt; [
+        &apos;host&apos; =&gt; &apos;my.logentries.internal.datahubhost.company.com&apos;,
+        &apos;port&apos; =&gt; &apos;10000&apos;,
+    ],
+],
+</code></pre><p><a name="monolog-formatters"></a></p>
+<h4 id="monolog-formatters">Monolog Formatters</h4>
+<p>When using the <code>monolog</code> driver, the Monolog <code>LineFormatter</code> will be used as the default formatter. However, you may customize the type of formatter passed to the handler using the <code>formatter</code> and <code>formatter_with</code> configuration options:</p>
+<pre class="language-"><code>&apos;browser&apos; =&gt; [
+    &apos;driver&apos; =&gt; &apos;monolog&apos;,
+    &apos;handler&apos; =&gt; Monolog\Handler\BrowserConsoleHandler::class,
+    &apos;formatter&apos; =&gt; Monolog\Formatter\HtmlFormatter::class,
+    &apos;formatter_with&apos; =&gt; [
+        &apos;dateFormat&apos; =&gt; &apos;Y-m-d&apos;,
+    ],
+],
+</code></pre><p>If you are using a Monolog handler that is capable of providing its own formatter, you may set the value of the <code>formatter</code> configuration option to <code>default</code>:</p>
+<pre class="language-"><code>&apos;newrelic&apos; =&gt; [
+    &apos;driver&apos; =&gt; &apos;monolog&apos;,
+    &apos;handler&apos; =&gt; Monolog\Handler\NewRelicHandler::class,
+    &apos;formatter&apos; =&gt; &apos;default&apos;,
+],
+</code></pre><p><a name="creating-custom-channels-via-factories"></a></p>
+<h3 id="creating-custom-channels-via-factories">Creating Custom Channels Via Factories</h3>
+<p>If you would like to define an entirely custom channel in which you have full control over Monolog&apos;s instantiation and configuration, you may specify a <code>custom</code> driver type in your <code>config/logging.php</code> configuration file. Your configuration should include a <code>via</code> option that contains the name of the factory class which will be invoked to create the Monolog instance:</p>
+<pre class="language-"><code>&apos;channels&apos; =&gt; [
+    &apos;example-custom-channel&apos; =&gt; [
+        &apos;driver&apos; =&gt; &apos;custom&apos;,
+        &apos;via&apos; =&gt; App\Logging\CreateCustomLogger::class,
+    ],
+],
+</code></pre><p>Once you have configured the <code>custom</code> driver channel, you&apos;re ready to define the class that will create your Monolog instance. This class only needs a single <code>__invoke</code> method which should return the Monolog logger instance. The method will receive the channels configuration array as its only argument:</p>
+<pre class="language-"><code>&lt;?php
+
+namespace App\Logging;
+
+use Monolog\Logger;
+
+class CreateCustomLogger
+{
+    /**
+     * Create a custom Monolog instance.
+     *
+     * @param  array  $config
+     * @return \Monolog\Logger
+     */
+    public function __invoke(array $config)
+    {
+        return new Logger(...);
+    }
+}
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="errors.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Error Handling">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Logging","level":"1.5.12","depth":2,"next":{"title":"Frontend","level":"1.6","depth":1,"ref":"","articles":[{"title":"Blade Templates","level":"1.6.1","depth":2,"path":"blade.md","ref":"blade.md","articles":[]},{"title":"Localization","level":"1.6.2","depth":2,"path":"localization.md","ref":"localization.md","articles":[]},{"title":"Frontend Scaffolding","level":"1.6.3","depth":2,"path":"frontend.md","ref":"frontend.md","articles":[]},{"title":"Compiling Assets","level":"1.6.4","depth":2,"path":"mix.md","ref":"mix.md","articles":[]}]},"previous":{"title":"Error Handling","level":"1.5.11","depth":2,"path":"errors.md","ref":"errors.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-highlight","-livereload","prism"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-solarizedlight.css"]},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Laravel 英文文档","language":"us-en","links":{"sidebar":{"Home":"https://docs.khs1994.com"}},"gitbook":"*"},"file":{"path":"logging.md","mtime":"2021-05-20T00:16:11.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-05-20T00:17:09.960Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

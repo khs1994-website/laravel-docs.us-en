@@ -1,0 +1,1948 @@
+
+<!DOCTYPE HTML>
+<html lang="us-en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Routing · Laravel 英文文档</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="middleware.html" />
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://docs.khs1994.com" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    Prologue
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="releases.html">
+            
+                <a href="releases.html">
+            
+                    
+                    Release Notes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="upgrade.html">
+            
+                <a href="upgrade.html">
+            
+                    
+                    Upgrade Guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="contributions.html">
+            
+                <a href="contributions.html">
+            
+                    
+                    Contribution Guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    Getting Started
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="installation.html">
+            
+                <a href="installation.html">
+            
+                    
+                    Installation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="configuration.html">
+            
+                <a href="configuration.html">
+            
+                    
+                    Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="structure.html">
+            
+                <a href="structure.html">
+            
+                    
+                    Directory Structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="homestead.html">
+            
+                <a href="homestead.html">
+            
+                    
+                    Homestead
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="valet.html">
+            
+                <a href="valet.html">
+            
+                    
+                    Valet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="deployment.html">
+            
+                <a href="deployment.html">
+            
+                    
+                    Deployment
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    Architecture Concepts
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="lifecycle.html">
+            
+                <a href="lifecycle.html">
+            
+                    
+                    Request Lifecycle
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="container.html">
+            
+                <a href="container.html">
+            
+                    
+                    Service Container
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="providers.html">
+            
+                <a href="providers.html">
+            
+                    
+                    Service Providers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="facades.html">
+            
+                <a href="facades.html">
+            
+                    
+                    Facades
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="contracts.html">
+            
+                <a href="contracts.html">
+            
+                    
+                    Contracts
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    The Basics
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.5.1" data-path="routing.html">
+            
+                <a href="routing.html">
+            
+                    
+                    Routing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="middleware.html">
+            
+                <a href="middleware.html">
+            
+                    
+                    Middleware
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="csrf.html">
+            
+                <a href="csrf.html">
+            
+                    
+                    CSRF Protection
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="controllers.html">
+            
+                <a href="controllers.html">
+            
+                    
+                    Controllers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="requests.html">
+            
+                <a href="requests.html">
+            
+                    
+                    Requests
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="responses.html">
+            
+                <a href="responses.html">
+            
+                    
+                    Responses
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="views.html">
+            
+                <a href="views.html">
+            
+                    
+                    Views
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="urls.html">
+            
+                <a href="urls.html">
+            
+                    
+                    URL Generation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="session.html">
+            
+                <a href="session.html">
+            
+                    
+                    Session
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.10" data-path="validation.html">
+            
+                <a href="validation.html">
+            
+                    
+                    Validation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.11" data-path="errors.html">
+            
+                <a href="errors.html">
+            
+                    
+                    Error Handling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.12" data-path="logging.html">
+            
+                <a href="logging.html">
+            
+                    
+                    Logging
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    Frontend
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="blade.html">
+            
+                <a href="blade.html">
+            
+                    
+                    Blade Templates
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="localization.html">
+            
+                <a href="localization.html">
+            
+                    
+                    Localization
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="frontend.md">
+            
+                <span>
+            
+                    
+                    Frontend Scaffolding
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="mix.html">
+            
+                <a href="mix.html">
+            
+                    
+                    Compiling Assets
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    Security
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="authentication.html">
+            
+                <a href="authentication.html">
+            
+                    
+                    Authentication
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="api-authentication.md">
+            
+                <span>
+            
+                    
+                    API Authentication
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="authorization.html">
+            
+                <a href="authorization.html">
+            
+                    
+                    Authorization
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="verification.html">
+            
+                <a href="verification.html">
+            
+                    
+                    Email Verification
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="encryption.html">
+            
+                <a href="encryption.html">
+            
+                    
+                    Encryption
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="hashing.html">
+            
+                <a href="hashing.html">
+            
+                    
+                    Hashing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7" data-path="passwords.html">
+            
+                <a href="passwords.html">
+            
+                    
+                    Password Reset
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" >
+            
+                <span>
+            
+                    
+                    Digging Deeper
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="artisan.html">
+            
+                <a href="artisan.html">
+            
+                    
+                    Artisan Console
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="broadcasting.html">
+            
+                <a href="broadcasting.html">
+            
+                    
+                    Broadcasting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="cache.html">
+            
+                <a href="cache.html">
+            
+                    
+                    Cache
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="collections.html">
+            
+                <a href="collections.html">
+            
+                    
+                    Collections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="events.html">
+            
+                <a href="events.html">
+            
+                    
+                    Events
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="filesystem.html">
+            
+                <a href="filesystem.html">
+            
+                    
+                    File Storage
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="helpers.html">
+            
+                <a href="helpers.html">
+            
+                    
+                    Helpers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.8" data-path="mail.html">
+            
+                <a href="mail.html">
+            
+                    
+                    Mail
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.9" data-path="notifications.html">
+            
+                <a href="notifications.html">
+            
+                    
+                    Notifications
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.10" data-path="packages.html">
+            
+                <a href="packages.html">
+            
+                    
+                    Package Development
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.11" data-path="queues.html">
+            
+                <a href="queues.html">
+            
+                    
+                    Queues
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.12" data-path="scheduling.html">
+            
+                <a href="scheduling.html">
+            
+                    
+                    Task Scheduling
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" >
+            
+                <span>
+            
+                    
+                    Database
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="database.html">
+            
+                <a href="database.html">
+            
+                    
+                    Getting Started
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="queries.html">
+            
+                <a href="queries.html">
+            
+                    
+                    Query Builder
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="pagination.html">
+            
+                <a href="pagination.html">
+            
+                    
+                    Pagination
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="migrations.html">
+            
+                <a href="migrations.html">
+            
+                    
+                    Migrations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="seeding.html">
+            
+                <a href="seeding.html">
+            
+                    
+                    Seeding
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="redis.html">
+            
+                <a href="redis.html">
+            
+                    
+                    Redis
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" >
+            
+                <span>
+            
+                    
+                    Eloquent ORM
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="eloquent.html">
+            
+                <a href="eloquent.html">
+            
+                    
+                    Getting Started
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="eloquent-relationships.html">
+            
+                <a href="eloquent-relationships.html">
+            
+                    
+                    Relationships
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="eloquent-collections.html">
+            
+                <a href="eloquent-collections.html">
+            
+                    
+                    Collections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="eloquent-mutators.html">
+            
+                <a href="eloquent-mutators.html">
+            
+                    
+                    Mutators
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.5" data-path="eloquent-resources.html">
+            
+                <a href="eloquent-resources.html">
+            
+                    
+                    API Resources
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.6" data-path="eloquent-serialization.html">
+            
+                <a href="eloquent-serialization.html">
+            
+                    
+                    Serialization
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" >
+            
+                <span>
+            
+                    
+                    Testing
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="testing.html">
+            
+                <a href="testing.html">
+            
+                    
+                    Getting Started
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="http-tests.html">
+            
+                <a href="http-tests.html">
+            
+                    
+                    HTTP Tests
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="console-tests.html">
+            
+                <a href="console-tests.html">
+            
+                    
+                    Console Tests
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="dusk.html">
+            
+                <a href="dusk.html">
+            
+                    
+                    Browser Tests
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.5" data-path="database-testing.html">
+            
+                <a href="database-testing.html">
+            
+                    
+                    Database
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.6" data-path="mocking.html">
+            
+                <a href="mocking.html">
+            
+                    
+                    Mocking
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" >
+            
+                <span>
+            
+                    
+                    Official Packages
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="billing.html">
+            
+                <a href="billing.html">
+            
+                    
+                    Cashier
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="dusk.html">
+            
+                <a href="dusk.html">
+            
+                    
+                    Dusk
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="envoy.html">
+            
+                <a href="envoy.html">
+            
+                    
+                    Envoy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.4" data-path="horizon.html">
+            
+                <a href="horizon.html">
+            
+                    
+                    Horizon
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.5" data-path="passport.html">
+            
+                <a href="passport.html">
+            
+                    
+                    Passport
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.6" data-path="scout.html">
+            
+                <a href="scout.html">
+            
+                    
+                    Scout
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.7" data-path="socialite.html">
+            
+                <a href="socialite.html">
+            
+                    
+                    Socialite
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.8" data-path="telescope.html">
+            
+                <a href="telescope.html">
+            
+                    
+                    Telescope
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Routing</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="routing">Routing</h1>
+<ul>
+<li><a href="#basic-routing">Basic Routing</a><ul>
+<li><a href="#redirect-routes">Redirect Routes</a></li>
+<li><a href="#view-routes">View Routes</a></li>
+</ul>
+</li>
+<li><a href="#route-parameters">Route Parameters</a><ul>
+<li><a href="#required-parameters">Required Parameters</a></li>
+<li><a href="#parameters-optional-parameters">Optional Parameters</a></li>
+<li><a href="#parameters-regular-expression-constraints">Regular Expression Constraints</a></li>
+</ul>
+</li>
+<li><a href="#named-routes">Named Routes</a></li>
+<li><a href="#route-groups">Route Groups</a><ul>
+<li><a href="#route-group-middleware">Middleware</a></li>
+<li><a href="#route-group-subdomain-routing">Subdomain Routing</a></li>
+<li><a href="#route-group-prefixes">Route Prefixes</a></li>
+<li><a href="#route-group-name-prefixes">Route Name Prefixes</a></li>
+</ul>
+</li>
+<li><a href="#route-model-binding">Route Model Binding</a><ul>
+<li><a href="#implicit-binding">Implicit Binding</a></li>
+<li><a href="#explicit-binding">Explicit Binding</a></li>
+</ul>
+</li>
+<li><a href="#fallback-routes">Fallback Routes</a></li>
+<li><a href="#rate-limiting">Rate Limiting</a><ul>
+<li><a href="#defining-rate-limiters">Defining Rate Limiters</a></li>
+<li><a href="#attaching-rate-limiters-to-routes">Attaching Rate Limiters To Routes</a></li>
+</ul>
+</li>
+<li><a href="#form-method-spoofing">Form Method Spoofing</a></li>
+<li><a href="#accessing-the-current-route">Accessing The Current Route</a></li>
+<li><a href="#cors">Cross-Origin Resource Sharing (CORS)</a></li>
+<li><a href="#route-caching">Route Caching</a></li>
+</ul>
+<p><a name="basic-routing"></a></p>
+<h2 id="basic-routing">Basic Routing</h2>
+<p>The most basic Laravel routes accept a URI and a closure, providing a very simple and expressive method of defining routes and behavior without complicated routing configuration files:</p>
+<pre class="language-"><code>use Illuminate\Support\Facades\Route;
+
+Route::get(&apos;/greeting&apos;, function () {
+    return &apos;Hello World&apos;;
+});
+</code></pre><p><a name="the-default-route-files"></a></p>
+<h4 id="the-default-route-files">The Default Route Files</h4>
+<p>All Laravel routes are defined in your route files, which are located in the <code>routes</code> directory. These files are automatically loaded by your application&apos;s <code>App\Providers\RouteServiceProvider</code>. The <code>routes/web.php</code> file defines routes that are for your web interface. These routes are assigned the <code>web</code> middleware group, which provides features like session state and CSRF protection. The routes in <code>routes/api.php</code> are stateless and are assigned the <code>api</code> middleware group.</p>
+<p>For most applications, you will begin by defining routes in your <code>routes/web.php</code> file. The routes defined in <code>routes/web.php</code> may be accessed by entering the defined route&apos;s URL in your browser. For example, you may access the following route by navigating to <code>http://example.com/user</code> in your browser:</p>
+<pre class="language-"><code>use App\Http\Controllers\UserController;
+
+Route::get(&apos;/user&apos;, [UserController::class, &apos;index&apos;]);
+</code></pre><p>Routes defined in the <code>routes/api.php</code> file are nested within a route group by the <code>RouteServiceProvider</code>. Within this group, the <code>/api</code> URI prefix is automatically applied so you do not need to manually apply it to every route in the file. You may modify the prefix and other route group options by modifying your <code>RouteServiceProvider</code> class.</p>
+<p><a name="available-router-methods"></a></p>
+<h4 id="available-router-methods">Available Router Methods</h4>
+<p>The router allows you to register routes that respond to any HTTP verb:</p>
+<pre class="language-"><code>Route::get($uri, $callback);
+Route::post($uri, $callback);
+Route::put($uri, $callback);
+Route::patch($uri, $callback);
+Route::delete($uri, $callback);
+Route::options($uri, $callback);
+</code></pre><p>Sometimes you may need to register a route that responds to multiple HTTP verbs. You may do so using the <code>match</code> method. Or, you may even register a route that responds to all HTTP verbs using the <code>any</code> method:</p>
+<pre class="language-"><code>Route::match([&apos;get&apos;, &apos;post&apos;], &apos;/&apos;, function () {
+    //
+});
+
+Route::any(&apos;/&apos;, function () {
+    //
+});
+</code></pre><p><a name="dependency-injection"></a></p>
+<h4 id="dependency-injection">Dependency Injection</h4>
+<p>You may type-hint any dependencies required by your route in your route&apos;s callback signature. The declared dependencies will automatically be resolved and injected into the callback by the Laravel <a href="docs/container">service container</a>. For example, you may type-hint the <code>Illuminate\Http\Request</code> class to have the current HTTP request automatically injected into your route callback:</p>
+<pre class="language-"><code>use Illuminate\Http\Request;
+
+Route::get(&apos;/users&apos;, function (Request $request) {
+    // ...
+});
+</code></pre><p><a name="csrf-protection"></a></p>
+<h4 id="csrf-protection">CSRF Protection</h4>
+<p>Remember, any HTML forms pointing to <code>POST</code>, <code>PUT</code>, <code>PATCH</code>, or <code>DELETE</code> routes that are defined in the <code>web</code> routes file should include a CSRF token field. Otherwise, the request will be rejected. You can read more about CSRF protection in the <a href="docs/csrf">CSRF documentation</a>:</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span> <span class="token attr-name">method</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>POST<span class="token punctuation">&quot;</span></span> <span class="token attr-name">action</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>/profile<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    @csrf
+    ...
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>form</span><span class="token punctuation">&gt;</span></span>
+</code></pre><p><a name="redirect-routes"></a></p>
+<h3 id="redirect-routes">Redirect Routes</h3>
+<p>If you are defining a route that redirects to another URI, you may use the <code>Route::redirect</code> method. This method provides a convenient shortcut so that you do not have to define a full route or controller for performing a simple redirect:</p>
+<pre class="language-"><code>Route::redirect(&apos;/here&apos;, &apos;/there&apos;);
+</code></pre><p>By default, <code>Route::redirect</code> returns a <code>302</code> status code. You may customize the status code using the optional third parameter:</p>
+<pre class="language-"><code>Route::redirect(&apos;/here&apos;, &apos;/there&apos;, 301);
+</code></pre><p>Or, you may use the <code>Route::permanentRedirect</code> method to return a <code>301</code> status code:</p>
+<pre class="language-"><code>Route::permanentRedirect(&apos;/here&apos;, &apos;/there&apos;);
+</code></pre><blockquote>
+<p>{note} When using route parameters in redirect routes, the following parameters are reserved by Laravel and cannot be used: <code>destination</code> and <code>status</code>.</p>
+</blockquote>
+<p><a name="view-routes"></a></p>
+<h3 id="view-routes">View Routes</h3>
+<p>If your route only needs to return a <a href="docs/views">view</a>, you may use the <code>Route::view</code> method. Like the <code>redirect</code> method, this method provides a simple shortcut so that you do not have to define a full route or controller. The <code>view</code> method accepts a URI as its first argument and a view name as its second argument. In addition, you may provide an array of data to pass to the view as an optional third argument:</p>
+<pre class="language-"><code>Route::view(&apos;/welcome&apos;, &apos;welcome&apos;);
+
+Route::view(&apos;/welcome&apos;, &apos;welcome&apos;, [&apos;name&apos; =&gt; &apos;Taylor&apos;]);
+</code></pre><blockquote>
+<p>{note} When using route parameters in view routes, the following parameters are reserved by Laravel and cannot be used: <code>view</code>, <code>data</code>, <code>status</code>, and <code>headers</code>.</p>
+</blockquote>
+<p><a name="route-parameters"></a></p>
+<h2 id="route-parameters">Route Parameters</h2>
+<p><a name="required-parameters"></a></p>
+<h3 id="required-parameters">Required Parameters</h3>
+<p>Sometimes you will need to capture segments of the URI within your route. For example, you may need to capture a user&apos;s ID from the URL. You may do so by defining route parameters:</p>
+<pre class="language-"><code>Route::get(&apos;/user/{id}&apos;, function ($id) {
+    return &apos;User &apos;.$id;
+});
+</code></pre><p>You may define as many route parameters as required by your route:</p>
+<pre class="language-"><code>Route::get(&apos;/posts/{post}/comments/{comment}&apos;, function ($postId, $commentId) {
+    //
+});
+</code></pre><p>Route parameters are always encased within <code>{}</code> braces and should consist of alphabetic characters. Underscores (<code>_</code>) are also acceptable within route parameter names. Route parameters are injected into route callbacks / controllers based on their order - the names of the route callback / controller arguments do not matter.</p>
+<p><a name="parameters-and-dependency-injection"></a></p>
+<h4 id="parameters--dependency-injection">Parameters &amp; Dependency Injection</h4>
+<p>If your route has dependencies that you would like the Laravel service container to automatically inject into your route&apos;s callback, you should list your route parameters after your dependencies:</p>
+<pre class="language-"><code>use Illuminate\Http\Request;
+
+Route::get(&apos;/user/{id}&apos;, function (Request $request, $id) {
+    return &apos;User &apos;.$id;
+});
+</code></pre><p><a name="parameters-optional-parameters"></a></p>
+<h3 id="optional-parameters">Optional Parameters</h3>
+<p>Occasionally you may need to specify a route parameter that may not always be present in the URI. You may do so by placing a <code>?</code> mark after the parameter name. Make sure to give the route&apos;s corresponding variable a default value:</p>
+<pre class="language-"><code>Route::get(&apos;/user/{name?}&apos;, function ($name = null) {
+    return $name;
+});
+
+Route::get(&apos;/user/{name?}&apos;, function ($name = &apos;John&apos;) {
+    return $name;
+});
+</code></pre><p><a name="parameters-regular-expression-constraints"></a></p>
+<h3 id="regular-expression-constraints">Regular Expression Constraints</h3>
+<p>You may constrain the format of your route parameters using the <code>where</code> method on a route instance. The <code>where</code> method accepts the name of the parameter and a regular expression defining how the parameter should be constrained:</p>
+<pre class="language-"><code>Route::get(&apos;/user/{name}&apos;, function ($name) {
+    //
+})-&gt;where(&apos;name&apos;, &apos;[A-Za-z]+&apos;);
+
+Route::get(&apos;/user/{id}&apos;, function ($id) {
+    //
+})-&gt;where(&apos;id&apos;, &apos;[0-9]+&apos;);
+
+Route::get(&apos;/user/{id}/{name}&apos;, function ($id, $name) {
+    //
+})-&gt;where([&apos;id&apos; =&gt; &apos;[0-9]+&apos;, &apos;name&apos; =&gt; &apos;[a-z]+&apos;]);
+</code></pre><p>For convenience, some commonly used regular expression patterns have helper methods that allow you to quickly add pattern constraints to your routes:</p>
+<pre class="language-"><code>Route::get(&apos;/user/{id}/{name}&apos;, function ($id, $name) {
+    //
+})-&gt;whereNumber(&apos;id&apos;)-&gt;whereAlpha(&apos;name&apos;);
+
+Route::get(&apos;/user/{name}&apos;, function ($name) {
+    //
+})-&gt;whereAlphaNumeric(&apos;name&apos;);
+
+Route::get(&apos;/user/{id}&apos;, function ($id) {
+    //
+})-&gt;whereUuid(&apos;id&apos;);
+</code></pre><p>If the incoming request does not match the route pattern constraints, a 404 HTTP response will be returned.</p>
+<p><a name="parameters-global-constraints"></a></p>
+<h4 id="global-constraints">Global Constraints</h4>
+<p>If you would like a route parameter to always be constrained by a given regular expression, you may use the <code>pattern</code> method. You should define these patterns in the <code>boot</code> method of your <code>App\Providers\RouteServiceProvider</code> class:</p>
+<pre class="language-"><code>/**
+ * Define your route model bindings, pattern filters, etc.
+ *
+ * @return void
+ */
+public function boot()
+{
+    Route::pattern(&apos;id&apos;, &apos;[0-9]+&apos;);
+}
+</code></pre><p>Once the pattern has been defined, it is automatically applied to all routes using that parameter name:</p>
+<pre class="language-"><code>Route::get(&apos;/user/{id}&apos;, function ($id) {
+    // Only executed if {id} is numeric...
+});
+</code></pre><p><a name="parameters-encoded-forward-slashes"></a></p>
+<h4 id="encoded-forward-slashes">Encoded Forward Slashes</h4>
+<p>The Laravel routing component allows all characters except <code>/</code> to be present within route parameter values. You must explicitly allow <code>/</code> to be part of your placeholder using a <code>where</code> condition regular expression:</p>
+<pre class="language-"><code>Route::get(&apos;/search/{search}&apos;, function ($search) {
+    return $search;
+})-&gt;where(&apos;search&apos;, &apos;.*&apos;);
+</code></pre><blockquote>
+<p>{note} Encoded forward slashes are only supported within the last route segment.</p>
+</blockquote>
+<p><a name="named-routes"></a></p>
+<h2 id="named-routes">Named Routes</h2>
+<p>Named routes allow the convenient generation of URLs or redirects for specific routes. You may specify a name for a route by chaining the <code>name</code> method onto the route definition:</p>
+<pre class="language-"><code>Route::get(&apos;/user/profile&apos;, function () {
+    //
+})-&gt;name(&apos;profile&apos;);
+</code></pre><p>You may also specify route names for controller actions:</p>
+<pre class="language-"><code>Route::get(
+    &apos;/user/profile&apos;,
+    [UserProfileController::class, &apos;show&apos;]
+)-&gt;name(&apos;profile&apos;);
+</code></pre><blockquote>
+<p>{note} Route names should always be unique.</p>
+</blockquote>
+<p><a name="generating-urls-to-named-routes"></a></p>
+<h4 id="generating-urls-to-named-routes">Generating URLs To Named Routes</h4>
+<p>Once you have assigned a name to a given route, you may use the route&apos;s name when generating URLs or redirects via Laravel&apos;s <code>route</code> and <code>redirect</code> helper functions:</p>
+<pre class="language-"><code>// Generating URLs...
+$url = route(&apos;profile&apos;);
+
+// Generating Redirects...
+return redirect()-&gt;route(&apos;profile&apos;);
+</code></pre><p>If the named route defines parameters, you may pass the parameters as the second argument to the <code>route</code> function. The given parameters will automatically be inserted into the generated URL in their correct positions:</p>
+<pre class="language-"><code>Route::get(&apos;/user/{id}/profile&apos;, function ($id) {
+    //
+})-&gt;name(&apos;profile&apos;);
+
+$url = route(&apos;profile&apos;, [&apos;id&apos; =&gt; 1]);
+</code></pre><p>If you pass additional parameters in the array, those key / value pairs will automatically be added to the generated URL&apos;s query string:</p>
+<pre class="language-"><code>Route::get(&apos;/user/{id}/profile&apos;, function ($id) {
+    //
+})-&gt;name(&apos;profile&apos;);
+
+$url = route(&apos;profile&apos;, [&apos;id&apos; =&gt; 1, &apos;photos&apos; =&gt; &apos;yes&apos;]);
+
+// /user/1/profile?photos=yes
+</code></pre><blockquote>
+<p>{tip} Sometimes, you may wish to specify request-wide default values for URL parameters, such as the current locale. To accomplish this, you may use the <a href="docs/urls#default-values"><code>URL::defaults</code> method</a>.</p>
+</blockquote>
+<p><a name="inspecting-the-current-route"></a></p>
+<h4 id="inspecting-the-current-route">Inspecting The Current Route</h4>
+<p>If you would like to determine if the current request was routed to a given named route, you may use the <code>named</code> method on a Route instance. For example, you may check the current route name from a route middleware:</p>
+<pre class="language-"><code>/**
+ * Handle an incoming request.
+ *
+ * @param  \Illuminate\Http\Request  $request
+ * @param  \Closure  $next
+ * @return mixed
+ */
+public function handle($request, Closure $next)
+{
+    if ($request-&gt;route()-&gt;named(&apos;profile&apos;)) {
+        //
+    }
+
+    return $next($request);
+}
+</code></pre><p><a name="route-groups"></a></p>
+<h2 id="route-groups">Route Groups</h2>
+<p>Route groups allow you to share route attributes, such as middleware, across a large number of routes without needing to define those attributes on each individual route.</p>
+<p>Nested groups attempt to intelligently &quot;merge&quot; attributes with their parent group. Middleware and <code>where</code> conditions are merged while names and prefixes are appended. Namespace delimiters and slashes in URI prefixes are automatically added where appropriate.</p>
+<p><a name="route-group-middleware"></a></p>
+<h3 id="middleware">Middleware</h3>
+<p>To assign <a href="docs/middleware">middleware</a> to all routes within a group, you may use the <code>middleware</code> method before defining the group. Middleware are executed in the order they are listed in the array:</p>
+<pre class="language-"><code>Route::middleware([&apos;first&apos;, &apos;second&apos;])-&gt;group(function () {
+    Route::get(&apos;/&apos;, function () {
+        // Uses first &amp; second middleware...
+    });
+
+    Route::get(&apos;/user/profile&apos;, function () {
+        // Uses first &amp; second middleware...
+    });
+});
+</code></pre><p><a name="route-group-subdomain-routing"></a></p>
+<h3 id="subdomain-routing">Subdomain Routing</h3>
+<p>Route groups may also be used to handle subdomain routing. Subdomains may be assigned route parameters just like route URIs, allowing you to capture a portion of the subdomain for usage in your route or controller. The subdomain may be specified by calling the <code>domain</code> method before defining the group:</p>
+<pre class="language-"><code>Route::domain(&apos;{account}.example.com&apos;)-&gt;group(function () {
+    Route::get(&apos;user/{id}&apos;, function ($account, $id) {
+        //
+    });
+});
+</code></pre><blockquote>
+<p>{note} In order to ensure your subdomain routes are reachable, you should register subdomain routes before registering root domain routes. This will prevent root domain routes from overwriting subdomain routes which have the same URI path.</p>
+</blockquote>
+<p><a name="route-group-prefixes"></a></p>
+<h3 id="route-prefixes">Route Prefixes</h3>
+<p>The <code>prefix</code> method may be used to prefix each route in the group with a given URI. For example, you may want to prefix all route URIs within the group with <code>admin</code>:</p>
+<pre class="language-"><code>Route::prefix(&apos;admin&apos;)-&gt;group(function () {
+    Route::get(&apos;/users&apos;, function () {
+        // Matches The &quot;/admin/users&quot; URL
+    });
+});
+</code></pre><p><a name="route-group-name-prefixes"></a></p>
+<h3 id="route-name-prefixes">Route Name Prefixes</h3>
+<p>The <code>name</code> method may be used to prefix each route name in the group with a given string. For example, you may want to prefix all of the grouped route&apos;s names with <code>admin</code>. The given string is prefixed to the route name exactly as it is specified, so we will be sure to provide the trailing <code>.</code> character in the prefix:</p>
+<pre class="language-"><code>Route::name(&apos;admin.&apos;)-&gt;group(function () {
+    Route::get(&apos;/users&apos;, function () {
+        // Route assigned name &quot;admin.users&quot;...
+    })-&gt;name(&apos;users&apos;);
+});
+</code></pre><p><a name="route-model-binding"></a></p>
+<h2 id="route-model-binding">Route Model Binding</h2>
+<p>When injecting a model ID to a route or controller action, you will often query the database to retrieve the model that corresponds to that ID. Laravel route model binding provides a convenient way to automatically inject the model instances directly into your routes. For example, instead of injecting a user&apos;s ID, you can inject the entire <code>User</code> model instance that matches the given ID.</p>
+<p><a name="implicit-binding"></a></p>
+<h3 id="implicit-binding">Implicit Binding</h3>
+<p>Laravel automatically resolves Eloquent models defined in routes or controller actions whose type-hinted variable names match a route segment name. For example:</p>
+<pre class="language-"><code>use App\Models\User;
+
+Route::get(&apos;/users/{user}&apos;, function (User $user) {
+    return $user-&gt;email;
+});
+</code></pre><p>Since the <code>$user</code> variable is type-hinted as the <code>App\Models\User</code> Eloquent model and the variable name matches the <code>{user}</code> URI segment, Laravel will automatically inject the model instance that has an ID matching the corresponding value from the request URI. If a matching model instance is not found in the database, a 404 HTTP response will automatically be generated.</p>
+<p>Of course, implicit binding is also possible when using controller methods. Again, note the <code>{user}</code> URI segment matches the <code>$user</code> variable in the controller which contains an <code>App\Models\User</code> type-hint:</p>
+<pre class="language-"><code>use App\Http\Controllers\UserController;
+use App\Models\User;
+
+// Route definition...
+Route::get(&apos;/users/{user}&apos;, [UserController::class, &apos;show&apos;]);
+
+// Controller method definition...
+public function show(User $user)
+{
+    return view(&apos;user.profile&apos;, [&apos;user&apos; =&gt; $user]);
+}
+</code></pre><p><a name="customizing-the-key">&lt;/a&gt;
+<a name="customizing-the-default-key-name"></a></a></p>
+<h4 id="customizing-the-key">Customizing The Key</h4>
+<p>Sometimes you may wish to resolve Eloquent models using a column other than <code>id</code>. To do so, you may specify the column in the route parameter definition:</p>
+<pre class="language-"><code>use App\Models\Post;
+
+Route::get(&apos;/posts/{post:slug}&apos;, function (Post $post) {
+    return $post;
+});
+</code></pre><p>If you would like model binding to always use a database column other than <code>id</code> when retrieving a given model class, you may override the <code>getRouteKeyName</code> method on the Eloquent model:</p>
+<pre class="language-"><code>/**
+ * Get the route key for the model.
+ *
+ * @return string
+ */
+public function getRouteKeyName()
+{
+    return &apos;slug&apos;;
+}
+</code></pre><p><a name="implicit-model-binding-scoping"></a></p>
+<h4 id="custom-keys--scoping">Custom Keys &amp; Scoping</h4>
+<p>When implicitly binding multiple Eloquent models in a single route definition, you may wish to scope the second Eloquent model such that it must be a child of the previous Eloquent model. For example, consider this route definition that retrieves a blog post by slug for a specific user:</p>
+<pre class="language-"><code>use App\Models\Post;
+use App\Models\User;
+
+Route::get(&apos;/users/{user}/posts/{post:slug}&apos;, function (User $user, Post $post) {
+    return $post;
+});
+</code></pre><p>When using a custom keyed implicit binding as a nested route parameter, Laravel will automatically scope the query to retrieve the nested model by its parent using conventions to guess the relationship name on the parent. In this case, it will be assumed that the <code>User</code> model has a relationship named <code>posts</code> (the plural form of the route parameter name) which can be used to retrieve the <code>Post</code> model.</p>
+<p><a name="customizing-missing-model-behavior"></a></p>
+<h4 id="customizing-missing-model-behavior">Customizing Missing Model Behavior</h4>
+<p>Typically, a 404 HTTP response will be generated if an implicitly bound model is not found. However, you may customize this behavior by calling the <code>missing</code> method when defining your route. The <code>missing</code> method accepts a closure that will be invoked if an implicitly bound model can not be found:</p>
+<pre class="language-"><code>use App\Http\Controllers\LocationsController;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
+
+Route::get(&apos;/locations/{location:slug}&apos;, [LocationsController::class, &apos;show&apos;])
+        -&gt;name(&apos;locations.view&apos;)
+        -&gt;missing(function (Request $request) {
+            return Redirect::route(&apos;locations.index&apos;);
+        });
+</code></pre><p><a name="explicit-binding"></a></p>
+<h3 id="explicit-binding">Explicit Binding</h3>
+<p>You are not required to use Laravel&apos;s implicit, convention based model resolution in order to use model binding. You can also explicitly define how route parameters correspond to models. To register an explicit binding, use the router&apos;s <code>model</code> method to specify the class for a given parameter. You should define your explicit model bindings at the beginning of the <code>boot</code> method of your <code>RouteServiceProvider</code> class:</p>
+<pre class="language-"><code>use App\Models\User;
+use Illuminate\Support\Facades\Route;
+
+/**
+ * Define your route model bindings, pattern filters, etc.
+ *
+ * @return void
+ */
+public function boot()
+{
+    Route::model(&apos;user&apos;, User::class);
+
+    // ...
+}
+</code></pre><p>Next, define a route that contains a <code>{user}</code> parameter:</p>
+<pre class="language-"><code>use App\Models\User;
+
+Route::get(&apos;/users/{user}&apos;, function (User $user) {
+    //
+});
+</code></pre><p>Since we have bound all <code>{user}</code> parameters to the <code>App\Models\User</code> model, an instance of that class will be injected into the route. So, for example, a request to <code>users/1</code> will inject the <code>User</code> instance from the database which has an ID of <code>1</code>.</p>
+<p>If a matching model instance is not found in the database, a 404 HTTP response will be automatically generated.</p>
+<p><a name="customizing-the-resolution-logic"></a></p>
+<h4 id="customizing-the-resolution-logic">Customizing The Resolution Logic</h4>
+<p>If you wish to define your own model binding resolution logic, you may use the <code>Route::bind</code> method. The closure you pass to the <code>bind</code> method will receive the value of the URI segment and should return the instance of the class that should be injected into the route. Again, this customization should take place in the <code>boot</code> method of your application&apos;s <code>RouteServiceProvider</code>:</p>
+<pre class="language-"><code>use App\Models\User;
+use Illuminate\Support\Facades\Route;
+
+/**
+ * Define your route model bindings, pattern filters, etc.
+ *
+ * @return void
+ */
+public function boot()
+{
+    Route::bind(&apos;user&apos;, function ($value) {
+        return User::where(&apos;name&apos;, $value)-&gt;firstOrFail();
+    });
+
+    // ...
+}
+</code></pre><p>Alternatively, you may override the <code>resolveRouteBinding</code> method on your Eloquent model. This method will receive the value of the URI segment and should return the instance of the class that should be injected into the route:</p>
+<pre class="language-"><code>/**
+ * Retrieve the model for a bound value.
+ *
+ * @param  mixed  $value
+ * @param  string|null  $field
+ * @return \Illuminate\Database\Eloquent\Model|null
+ */
+public function resolveRouteBinding($value, $field = null)
+{
+    return $this-&gt;where(&apos;name&apos;, $value)-&gt;firstOrFail();
+}
+</code></pre><p>If a route is utilizing <a href="#implicit-model-binding-scoping">implicit binding scoping</a>, the <code>resolveChildRouteBinding</code> method will be used to resolve the child binding of the parent model:</p>
+<pre class="language-"><code>/**
+ * Retrieve the child model for a bound value.
+ *
+ * @param  string  $childType
+ * @param  mixed  $value
+ * @param  string|null  $field
+ * @return \Illuminate\Database\Eloquent\Model|null
+ */
+public function resolveChildRouteBinding($childType, $value, $field)
+{
+    return parent::resolveChildRouteBinding($childType, $value, $field);
+}
+</code></pre><p><a name="fallback-routes"></a></p>
+<h2 id="fallback-routes">Fallback Routes</h2>
+<p>Using the <code>Route::fallback</code> method, you may define a route that will be executed when no other route matches the incoming request. Typically, unhandled requests will automatically render a &quot;404&quot; page via your application&apos;s exception handler. However, since you would typically define the <code>fallback</code> route within your <code>routes/web.php</code> file, all middleware in the <code>web</code> middleware group will apply to the route. You are free to add additional middleware to this route as needed:</p>
+<pre class="language-"><code>Route::fallback(function () {
+    //
+});
+</code></pre><blockquote>
+<p>{note} The fallback route should always be the last route registered by your application.</p>
+</blockquote>
+<p><a name="rate-limiting"></a></p>
+<h2 id="rate-limiting">Rate Limiting</h2>
+<p><a name="defining-rate-limiters"></a></p>
+<h3 id="defining-rate-limiters">Defining Rate Limiters</h3>
+<p>Laravel includes powerful and customizable rate limiting services that you may utilize to restrict the amount of traffic for a given route or group of routes. To get started, you should define rate limiter configurations that meet your application&apos;s needs. Typically, this should be done within the <code>configureRateLimiting</code> method of your application&apos;s <code>App\Providers\RouteServiceProvider</code> class.</p>
+<p>Rate limiters are defined using the <code>RateLimiter</code> facade&apos;s <code>for</code> method. The <code>for</code> method accepts a rate limiter name and a closure that returns the limit configuration that should apply to routes that are assigned to the rate limiter. Limit configuration are instances of the <code>Illuminate\Cache\RateLimiting\Limit</code> class. This class contains helpful &quot;builder&quot; methods so that you can quickly define your limit. The rate limiter name may be any string you wish:</p>
+<pre class="language-"><code>use Illuminate\Cache\RateLimiting\Limit;
+use Illuminate\Support\Facades\RateLimiter;
+
+/**
+ * Configure the rate limiters for the application.
+ *
+ * @return void
+ */
+protected function configureRateLimiting()
+{
+    RateLimiter::for(&apos;global&apos;, function (Request $request) {
+        return Limit::perMinute(1000);
+    });
+}
+</code></pre><p>If the incoming request exceeds the specified rate limit, a response with a 429 HTTP status code will automatically be returned by Laravel. If you would like to define your own response that should be returned by a rate limit, you may use the <code>response</code> method:</p>
+<pre class="language-"><code>RateLimiter::for(&apos;global&apos;, function (Request $request) {
+    return Limit::perMinute(1000)-&gt;response(function () {
+        return response(&apos;Custom response...&apos;, 429);
+    });
+});
+</code></pre><p>Since rate limiter callbacks receive the incoming HTTP request instance, you may build the appropriate rate limit dynamically based on the incoming request or authenticated user:</p>
+<pre class="language-"><code>RateLimiter::for(&apos;uploads&apos;, function (Request $request) {
+    return $request-&gt;user()-&gt;vipCustomer()
+                ? Limit::none()
+                : Limit::perMinute(100);
+});
+</code></pre><p><a name="segmenting-rate-limits"></a></p>
+<h4 id="segmenting-rate-limits">Segmenting Rate Limits</h4>
+<p>Sometimes you may wish to segment rate limits by some arbitrary value. For example, you may wish to allow users to access a given route 100 times per minute per IP address. To accomplish this, you may use the <code>by</code> method when building your rate limit:</p>
+<pre class="language-"><code>RateLimiter::for(&apos;uploads&apos;, function (Request $request) {
+    return $request-&gt;user()-&gt;vipCustomer()
+                ? Limit::none()
+                : Limit::perMinute(100)-&gt;by($request-&gt;ip());
+});
+</code></pre><p>To illustrate this feature using another example, we can limit access to the route to 100 times per minute per authenticated user ID or 10 times per minute per IP address for guests:</p>
+<pre class="language-"><code>RateLimiter::for(&apos;uploads&apos;, function (Request $request) {
+    return $request-&gt;user()
+                ? Limit::perMinute(100)-&gt;by($request-&gt;user()-&gt;id)
+                : Limit::perMinute(10)-&gt;by($request-&gt;ip());
+});
+</code></pre><p><a name="multiple-rate-limits"></a></p>
+<h4 id="multiple-rate-limits">Multiple Rate Limits</h4>
+<p>If needed, you may return an array of rate limits for a given rate limiter configuration. Each rate limit will be evaluated for the route based on the order they are placed within the array:</p>
+<pre class="language-"><code>RateLimiter::for(&apos;login&apos;, function (Request $request) {
+    return [
+        Limit::perMinute(500),
+        Limit::perMinute(3)-&gt;by($request-&gt;input(&apos;email&apos;)),
+    ];
+});
+</code></pre><p><a name="attaching-rate-limiters-to-routes"></a></p>
+<h3 id="attaching-rate-limiters-to-routes">Attaching Rate Limiters To Routes</h3>
+<p>Rate limiters may be attached to routes or route groups using the <code>throttle</code> <a href="docs/middleware">middleware</a>. The throttle middleware accepts the name of the rate limiter you wish to assign to the route:</p>
+<pre class="language-"><code>Route::middleware([&apos;throttle:uploads&apos;])-&gt;group(function () {
+    Route::post(&apos;/audio&apos;, function () {
+        //
+    });
+
+    Route::post(&apos;/video&apos;, function () {
+        //
+    });
+});
+</code></pre><p><a name="throttling-with-redis"></a></p>
+<h4 id="throttling-with-redis">Throttling With Redis</h4>
+<p>Typically, the <code>throttle</code> middleware is mapped to the <code>Illuminate\Routing\Middleware\ThrottleRequests</code> class. This mapping is defined in your application&apos;s HTTP kernel (<code>App\Http\Kernel</code>). However, if you are using Redis as your application&apos;s cache driver, you may wish to change this mapping to use the <code>Illuminate\Routing\Middleware\ThrottleRequestsWithRedis</code> class. This class is more efficient at managing rate limiting using Redis:</p>
+<pre class="language-"><code>&apos;throttle&apos; =&gt; \Illuminate\Routing\Middleware\ThrottleRequestsWithRedis::class,
+</code></pre><p><a name="form-method-spoofing"></a></p>
+<h2 id="form-method-spoofing">Form Method Spoofing</h2>
+<p>HTML forms do not support <code>PUT</code>, <code>PATCH</code>, or <code>DELETE</code> actions. So, when defining <code>PUT</code>, <code>PATCH</code>, or <code>DELETE</code> routes that are called from an HTML form, you will need to add a hidden <code>_method</code> field to the form. The value sent with the <code>_method</code> field will be used as the HTTP request method:</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span> <span class="token attr-name">action</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>/example<span class="token punctuation">&quot;</span></span> <span class="token attr-name">method</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>POST<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>hidden<span class="token punctuation">&quot;</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>_method<span class="token punctuation">&quot;</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>PUT<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>hidden<span class="token punctuation">&quot;</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>_token<span class="token punctuation">&quot;</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>{{ csrf_token() }}<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>form</span><span class="token punctuation">&gt;</span></span>
+</code></pre><p>For convenience, you may use the <code>@method</code> <a href="docs/blade">Blade directive</a> to generate the <code>_method</code> input field:</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span> <span class="token attr-name">action</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>/example<span class="token punctuation">&quot;</span></span> <span class="token attr-name">method</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>POST<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    @method(&apos;PUT&apos;)
+    @csrf
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>form</span><span class="token punctuation">&gt;</span></span>
+</code></pre><p><a name="accessing-the-current-route"></a></p>
+<h2 id="accessing-the-current-route">Accessing The Current Route</h2>
+<p>You may use the <code>current</code>, <code>currentRouteName</code>, and <code>currentRouteAction</code> methods on the <code>Route</code> facade to access information about the route handling the incoming request:</p>
+<pre class="language-"><code>use Illuminate\Support\Facades\Route;
+
+$route = Route::current(); // Illuminate\Routing\Route
+$name = Route::currentRouteName(); // string
+$action = Route::currentRouteAction(); // string
+</code></pre><p>You may refer to the API documentation for both the <a href="https://laravel.com/api//Illuminate/Routing/Router.html" target="_blank">underlying class of the Route facade</a> and <a href="https://laravel.com/api//Illuminate/Routing/Route.html" target="_blank">Route instance</a> to review all of the methods that are available on the router and route classes.</p>
+<p><a name="cors"></a></p>
+<h2 id="cross-origin-resource-sharing-cors">Cross-Origin Resource Sharing (CORS)</h2>
+<p>Laravel can automatically respond to CORS <code>OPTIONS</code> HTTP requests with values that you configure. All CORS settings may be configured in your application&apos;s <code>config/cors.php</code> configuration file. The <code>OPTIONS</code> requests will automatically be handled by the <code>HandleCors</code> <a href="docs/middleware">middleware</a> that is included by default in your global middleware stack. Your global middleware stack is located in your application&apos;s HTTP kernel (<code>App\Http\Kernel</code>).</p>
+<blockquote>
+<p>{tip} For more information on CORS and CORS headers, please consult the <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#The_HTTP_response_headers" target="_blank">MDN web documentation on CORS</a>.</p>
+</blockquote>
+<p><a name="route-caching"></a></p>
+<h2 id="route-caching">Route Caching</h2>
+<p>When deploying your application to production, you should take advantage of Laravel&apos;s route cache. Using the route cache will drastically decrease the amount of time it takes to register all of your application&apos;s routes. To generate a route cache, execute the <code>route:cache</code> Artisan command:</p>
+<pre class="language-"><code>php artisan route:cache
+</code></pre><p>After running this command, your cached routes file will be loaded on every request. Remember, if you add any new routes you will need to generate a fresh route cache. Because of this, you should only run the <code>route:cache</code> command during your project&apos;s deployment.</p>
+<p>You may use the <code>route:clear</code> command to clear the route cache:</p>
+<pre class="language-"><code>php artisan route:clear
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+                <a href="middleware.html" class="navigation navigation-next navigation-unique" aria-label="Next page: Middleware">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Routing","level":"1.5.1","depth":2,"next":{"title":"Middleware","level":"1.5.2","depth":2,"path":"middleware.md","ref":"middleware.md","articles":[]},"previous":{"title":"The Basics","level":"1.5","depth":1,"ref":"","articles":[{"title":"Routing","level":"1.5.1","depth":2,"path":"routing.md","ref":"routing.md","articles":[]},{"title":"Middleware","level":"1.5.2","depth":2,"path":"middleware.md","ref":"middleware.md","articles":[]},{"title":"CSRF Protection","level":"1.5.3","depth":2,"path":"csrf.md","ref":"csrf.md","articles":[]},{"title":"Controllers","level":"1.5.4","depth":2,"path":"controllers.md","ref":"controllers.md","articles":[]},{"title":"Requests","level":"1.5.5","depth":2,"path":"requests.md","ref":"requests.md","articles":[]},{"title":"Responses","level":"1.5.6","depth":2,"path":"responses.md","ref":"responses.md","articles":[]},{"title":"Views","level":"1.5.7","depth":2,"path":"views.md","ref":"views.md","articles":[]},{"title":"URL Generation","level":"1.5.8","depth":2,"path":"urls.md","ref":"urls.md","articles":[]},{"title":"Session","level":"1.5.9","depth":2,"path":"session.md","ref":"session.md","articles":[]},{"title":"Validation","level":"1.5.10","depth":2,"path":"validation.md","ref":"validation.md","articles":[]},{"title":"Error Handling","level":"1.5.11","depth":2,"path":"errors.md","ref":"errors.md","articles":[]},{"title":"Logging","level":"1.5.12","depth":2,"path":"logging.md","ref":"logging.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-sharing","-highlight","-livereload","prism"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-solarizedlight.css"]},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Laravel 英文文档","language":"us-en","links":{"sidebar":{"Home":"https://docs.khs1994.com"}},"gitbook":"*"},"file":{"path":"routing.md","mtime":"2021-05-20T00:16:11.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-05-20T00:17:09.960Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

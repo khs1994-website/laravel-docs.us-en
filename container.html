@@ -1,0 +1,1791 @@
+
+<!DOCTYPE HTML>
+<html lang="us-en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Service Container · Laravel 英文文档</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="providers.html" />
+    
+    
+    <link rel="prev" href="lifecycle.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://docs.khs1994.com" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    Prologue
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="releases.html">
+            
+                <a href="releases.html">
+            
+                    
+                    Release Notes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="upgrade.html">
+            
+                <a href="upgrade.html">
+            
+                    
+                    Upgrade Guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="contributions.html">
+            
+                <a href="contributions.html">
+            
+                    
+                    Contribution Guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    Getting Started
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="installation.html">
+            
+                <a href="installation.html">
+            
+                    
+                    Installation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="configuration.html">
+            
+                <a href="configuration.html">
+            
+                    
+                    Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="structure.html">
+            
+                <a href="structure.html">
+            
+                    
+                    Directory Structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="homestead.html">
+            
+                <a href="homestead.html">
+            
+                    
+                    Homestead
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="valet.html">
+            
+                <a href="valet.html">
+            
+                    
+                    Valet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="deployment.html">
+            
+                <a href="deployment.html">
+            
+                    
+                    Deployment
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    Architecture Concepts
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="lifecycle.html">
+            
+                <a href="lifecycle.html">
+            
+                    
+                    Request Lifecycle
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.2" data-path="container.html">
+            
+                <a href="container.html">
+            
+                    
+                    Service Container
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="providers.html">
+            
+                <a href="providers.html">
+            
+                    
+                    Service Providers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="facades.html">
+            
+                <a href="facades.html">
+            
+                    
+                    Facades
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="contracts.html">
+            
+                <a href="contracts.html">
+            
+                    
+                    Contracts
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    The Basics
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="routing.html">
+            
+                <a href="routing.html">
+            
+                    
+                    Routing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="middleware.html">
+            
+                <a href="middleware.html">
+            
+                    
+                    Middleware
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="csrf.html">
+            
+                <a href="csrf.html">
+            
+                    
+                    CSRF Protection
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="controllers.html">
+            
+                <a href="controllers.html">
+            
+                    
+                    Controllers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="requests.html">
+            
+                <a href="requests.html">
+            
+                    
+                    Requests
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="responses.html">
+            
+                <a href="responses.html">
+            
+                    
+                    Responses
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="views.html">
+            
+                <a href="views.html">
+            
+                    
+                    Views
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="urls.html">
+            
+                <a href="urls.html">
+            
+                    
+                    URL Generation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="session.html">
+            
+                <a href="session.html">
+            
+                    
+                    Session
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.10" data-path="validation.html">
+            
+                <a href="validation.html">
+            
+                    
+                    Validation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.11" data-path="errors.html">
+            
+                <a href="errors.html">
+            
+                    
+                    Error Handling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.12" data-path="logging.html">
+            
+                <a href="logging.html">
+            
+                    
+                    Logging
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    Frontend
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="blade.html">
+            
+                <a href="blade.html">
+            
+                    
+                    Blade Templates
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="localization.html">
+            
+                <a href="localization.html">
+            
+                    
+                    Localization
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="frontend.md">
+            
+                <span>
+            
+                    
+                    Frontend Scaffolding
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="mix.html">
+            
+                <a href="mix.html">
+            
+                    
+                    Compiling Assets
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    Security
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="authentication.html">
+            
+                <a href="authentication.html">
+            
+                    
+                    Authentication
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="api-authentication.md">
+            
+                <span>
+            
+                    
+                    API Authentication
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="authorization.html">
+            
+                <a href="authorization.html">
+            
+                    
+                    Authorization
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="verification.html">
+            
+                <a href="verification.html">
+            
+                    
+                    Email Verification
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="encryption.html">
+            
+                <a href="encryption.html">
+            
+                    
+                    Encryption
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="hashing.html">
+            
+                <a href="hashing.html">
+            
+                    
+                    Hashing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7" data-path="passwords.html">
+            
+                <a href="passwords.html">
+            
+                    
+                    Password Reset
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" >
+            
+                <span>
+            
+                    
+                    Digging Deeper
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="artisan.html">
+            
+                <a href="artisan.html">
+            
+                    
+                    Artisan Console
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="broadcasting.html">
+            
+                <a href="broadcasting.html">
+            
+                    
+                    Broadcasting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="cache.html">
+            
+                <a href="cache.html">
+            
+                    
+                    Cache
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="collections.html">
+            
+                <a href="collections.html">
+            
+                    
+                    Collections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="events.html">
+            
+                <a href="events.html">
+            
+                    
+                    Events
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="filesystem.html">
+            
+                <a href="filesystem.html">
+            
+                    
+                    File Storage
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="helpers.html">
+            
+                <a href="helpers.html">
+            
+                    
+                    Helpers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.8" data-path="mail.html">
+            
+                <a href="mail.html">
+            
+                    
+                    Mail
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.9" data-path="notifications.html">
+            
+                <a href="notifications.html">
+            
+                    
+                    Notifications
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.10" data-path="packages.html">
+            
+                <a href="packages.html">
+            
+                    
+                    Package Development
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.11" data-path="queues.html">
+            
+                <a href="queues.html">
+            
+                    
+                    Queues
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.12" data-path="scheduling.html">
+            
+                <a href="scheduling.html">
+            
+                    
+                    Task Scheduling
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" >
+            
+                <span>
+            
+                    
+                    Database
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="database.html">
+            
+                <a href="database.html">
+            
+                    
+                    Getting Started
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="queries.html">
+            
+                <a href="queries.html">
+            
+                    
+                    Query Builder
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="pagination.html">
+            
+                <a href="pagination.html">
+            
+                    
+                    Pagination
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="migrations.html">
+            
+                <a href="migrations.html">
+            
+                    
+                    Migrations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="seeding.html">
+            
+                <a href="seeding.html">
+            
+                    
+                    Seeding
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="redis.html">
+            
+                <a href="redis.html">
+            
+                    
+                    Redis
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" >
+            
+                <span>
+            
+                    
+                    Eloquent ORM
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="eloquent.html">
+            
+                <a href="eloquent.html">
+            
+                    
+                    Getting Started
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="eloquent-relationships.html">
+            
+                <a href="eloquent-relationships.html">
+            
+                    
+                    Relationships
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="eloquent-collections.html">
+            
+                <a href="eloquent-collections.html">
+            
+                    
+                    Collections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="eloquent-mutators.html">
+            
+                <a href="eloquent-mutators.html">
+            
+                    
+                    Mutators
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.5" data-path="eloquent-resources.html">
+            
+                <a href="eloquent-resources.html">
+            
+                    
+                    API Resources
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.6" data-path="eloquent-serialization.html">
+            
+                <a href="eloquent-serialization.html">
+            
+                    
+                    Serialization
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" >
+            
+                <span>
+            
+                    
+                    Testing
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="testing.html">
+            
+                <a href="testing.html">
+            
+                    
+                    Getting Started
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="http-tests.html">
+            
+                <a href="http-tests.html">
+            
+                    
+                    HTTP Tests
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="console-tests.html">
+            
+                <a href="console-tests.html">
+            
+                    
+                    Console Tests
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="dusk.html">
+            
+                <a href="dusk.html">
+            
+                    
+                    Browser Tests
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.5" data-path="database-testing.html">
+            
+                <a href="database-testing.html">
+            
+                    
+                    Database
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.6" data-path="mocking.html">
+            
+                <a href="mocking.html">
+            
+                    
+                    Mocking
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" >
+            
+                <span>
+            
+                    
+                    Official Packages
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="billing.html">
+            
+                <a href="billing.html">
+            
+                    
+                    Cashier
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="dusk.html">
+            
+                <a href="dusk.html">
+            
+                    
+                    Dusk
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="envoy.html">
+            
+                <a href="envoy.html">
+            
+                    
+                    Envoy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.4" data-path="horizon.html">
+            
+                <a href="horizon.html">
+            
+                    
+                    Horizon
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.5" data-path="passport.html">
+            
+                <a href="passport.html">
+            
+                    
+                    Passport
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.6" data-path="scout.html">
+            
+                <a href="scout.html">
+            
+                    
+                    Scout
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.7" data-path="socialite.html">
+            
+                <a href="socialite.html">
+            
+                    
+                    Socialite
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.8" data-path="telescope.html">
+            
+                <a href="telescope.html">
+            
+                    
+                    Telescope
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Service Container</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="service-container">Service Container</h1>
+<ul>
+<li><a href="#introduction">Introduction</a><ul>
+<li><a href="#zero-configuration-resolution">Zero Configuration Resolution</a></li>
+<li><a href="#when-to-use-the-container">When To Use The Container</a></li>
+</ul>
+</li>
+<li><a href="#binding">Binding</a><ul>
+<li><a href="#binding-basics">Binding Basics</a></li>
+<li><a href="#binding-interfaces-to-implementations">Binding Interfaces To Implementations</a></li>
+<li><a href="#contextual-binding">Contextual Binding</a></li>
+<li><a href="#binding-primitives">Binding Primitives</a></li>
+<li><a href="#binding-typed-variadics">Binding Typed Variadics</a></li>
+<li><a href="#tagging">Tagging</a></li>
+<li><a href="#extending-bindings">Extending Bindings</a></li>
+</ul>
+</li>
+<li><a href="#resolving">Resolving</a><ul>
+<li><a href="#the-make-method">The Make Method</a></li>
+<li><a href="#automatic-injection">Automatic Injection</a></li>
+</ul>
+</li>
+<li><a href="#container-events">Container Events</a></li>
+<li><a href="#psr-11">PSR-11</a></li>
+</ul>
+<p><a name="introduction"></a></p>
+<h2 id="introduction">Introduction</h2>
+<p>The Laravel service container is a powerful tool for managing class dependencies and performing dependency injection. Dependency injection is a fancy phrase that essentially means this: class dependencies are &quot;injected&quot; into the class via the constructor or, in some cases, &quot;setter&quot; methods.</p>
+<p>Let&apos;s look at a simple example:</p>
+<pre class="language-"><code>&lt;?php
+
+namespace App\Http\Controllers;
+
+use App\Http\Controllers\Controller;
+use App\Repositories\UserRepository;
+use App\Models\User;
+
+class UserController extends Controller
+{
+    /**
+     * The user repository implementation.
+     *
+     * @var UserRepository
+     */
+    protected $users;
+
+    /**
+     * Create a new controller instance.
+     *
+     * @param  UserRepository  $users
+     * @return void
+     */
+    public function __construct(UserRepository $users)
+    {
+        $this-&gt;users = $users;
+    }
+
+    /**
+     * Show the profile for the given user.
+     *
+     * @param  int  $id
+     * @return Response
+     */
+    public function show($id)
+    {
+        $user = $this-&gt;users-&gt;find($id);
+
+        return view(&apos;user.profile&apos;, [&apos;user&apos; =&gt; $user]);
+    }
+}
+</code></pre><p>In this example, the <code>UserController</code> needs to retrieve users from a data source. So, we will <strong>inject</strong> a service that is able to retrieve users. In this context, our <code>UserRepository</code> most likely uses <a href="docs/eloquent">Eloquent</a> to retrieve user information from the database. However, since the repository is injected, we are able to easily swap it out with another implementation. We are also able to easily &quot;mock&quot;, or create a dummy implementation of the <code>UserRepository</code> when testing our application.</p>
+<p>A deep understanding of the Laravel service container is essential to building a powerful, large application, as well as for contributing to the Laravel core itself.</p>
+<p><a name="zero-configuration-resolution"></a></p>
+<h3 id="zero-configuration-resolution">Zero Configuration Resolution</h3>
+<p>If a class has no dependencies or only depends on other concrete classes (not interfaces), the container does not need to be instructed on how to resolve that class. For example, you may place the following code in your <code>routes/web.php</code> file:</p>
+<pre class="language-"><code>&lt;?php
+
+class Service
+{
+    //
+}
+
+Route::get(&apos;/&apos;, function (Service $service) {
+    die(get_class($service));
+});
+</code></pre><p>In this example, hitting your application&apos;s <code>/</code> route will automatically resolve the <code>Service</code> class and inject it into your route&apos;s handler. This is game changing. It means you can develop your application and take advantage of dependency injection without worrying about bloated configuration files.</p>
+<p>Thankfully, many of the classes you will be writing when building a Laravel application automatically receive their dependencies via the container, including <a href="docs/controllers">controllers</a>, <a href="docs/events">event listeners</a>, <a href="docs/middleware">middleware</a>, and more. Additionally, you may type-hint dependencies in the <code>handle</code> method of <a href="docs/queues">queued jobs</a>. Once you taste the power of automatic and zero configuration dependency injection it feels impossible to develop without it.</p>
+<p><a name="when-to-use-the-container"></a></p>
+<h3 id="when-to-use-the-container">When To Use The Container</h3>
+<p>Thanks to zero configuration resolution, you will often type-hint dependencies on routes, controllers, event listeners, and elsewhere without ever manually interacting with the container. For example, you might type-hint the <code>Illuminate\Http\Request</code> object on your route definition so that you can easily access the current request. Even though we never have to interact with the container to write this code, it is managing the injection of these dependencies behind the scenes:</p>
+<pre class="language-"><code>use Illuminate\Http\Request;
+
+Route::get(&apos;/&apos;, function (Request $request) {
+    // ...
+});
+</code></pre><p>In many cases, thanks to automatic dependency injection and <a href="docs/facades">facades</a>, you can build Laravel applications without <strong>ever</strong> manually binding or resolving anything from the container. <strong>So, when would you ever manually interact with the container?</strong> Let&apos;s examine two situations.</p>
+<p>First, if you write a class that implements an interface and you wish to type-hint that interface on a route or class constructor, you must <a href="#binding-interfaces-to-implementations">tell the container how to resolve that interface</a>. Secondly, if you are <a href="docs/packages">writing a Laravel package</a> that you plan to share with other Laravel developers, you may need to bind your package&apos;s services into the container.</p>
+<p><a name="binding"></a></p>
+<h2 id="binding">Binding</h2>
+<p><a name="binding-basics"></a></p>
+<h3 id="binding-basics">Binding Basics</h3>
+<p><a name="simple-bindings"></a></p>
+<h4 id="simple-bindings">Simple Bindings</h4>
+<p>Almost all of your service container bindings will be registered within <a href="docs/providers">service providers</a>, so most of these examples will demonstrate using the container in that context.</p>
+<p>Within a service provider, you always have access to the container via the <code>$this-&gt;app</code> property. We can register a binding using the <code>bind</code> method, passing the class or interface name that we wish to register along with a closure that returns an instance of the class:</p>
+<pre class="language-"><code>use App\Services\Transistor;
+use App\Services\PodcastParser;
+
+$this-&gt;app-&gt;bind(Transistor::class, function ($app) {
+    return new Transistor($app-&gt;make(PodcastParser::class));
+});
+</code></pre><p>Note that we receive the container itself as an argument to the resolver. We can then use the container to resolve sub-dependencies of the object we are building.</p>
+<p>As mentioned, you will typically be interacting with the container within service providers; however, if you would like to interact with the container outside of a service provider, you may do so via the <code>App</code> <a href="docs/facades">facade</a>:</p>
+<pre class="language-"><code>use App\Services\Transistor;
+use Illuminate\Support\Facades\App;
+
+App::bind(Transistor::class, function ($app) {
+    // ...
+});
+</code></pre><blockquote>
+<p>{tip} There is no need to bind classes into the container if they do not depend on any interfaces. The container does not need to be instructed on how to build these objects, since it can automatically resolve these objects using reflection.</p>
+</blockquote>
+<p><a name="binding-a-singleton"></a></p>
+<h4 id="binding-a-singleton">Binding A Singleton</h4>
+<p>The <code>singleton</code> method binds a class or interface into the container that should only be resolved one time. Once a singleton binding is resolved, the same object instance will be returned on subsequent calls into the container:</p>
+<pre class="language-"><code>use App\Services\Transistor;
+use App\Services\PodcastParser;
+
+$this-&gt;app-&gt;singleton(Transistor::class, function ($app) {
+    return new Transistor($app-&gt;make(PodcastParser::class));
+});
+</code></pre><p><a name="binding-instances"></a></p>
+<h4 id="binding-instances">Binding Instances</h4>
+<p>You may also bind an existing object instance into the container using the <code>instance</code> method. The given instance will always be returned on subsequent calls into the container:</p>
+<pre class="language-"><code>use App\Services\Transistor;
+use App\Services\PodcastParser;
+
+$service = new Transistor(new PodcastParser);
+
+$this-&gt;app-&gt;instance(Transistor::class, $service);
+</code></pre><p><a name="binding-interfaces-to-implementations"></a></p>
+<h3 id="binding-interfaces-to-implementations">Binding Interfaces To Implementations</h3>
+<p>A very powerful feature of the service container is its ability to bind an interface to a given implementation. For example, let&apos;s assume we have an <code>EventPusher</code> interface and a <code>RedisEventPusher</code> implementation. Once we have coded our <code>RedisEventPusher</code> implementation of this interface, we can register it with the service container like so:</p>
+<pre class="language-"><code>use App\Contracts\EventPusher;
+use App\Services\RedisEventPusher;
+
+$this-&gt;app-&gt;bind(EventPusher::class, RedisEventPusher::class);
+</code></pre><p>This statement tells the container that it should inject the <code>RedisEventPusher</code> when a class needs an implementation of <code>EventPusher</code>. Now we can type-hint the <code>EventPusher</code> interface in the constructor of a class that is resolved by the container. Remember, controllers, event listeners, middleware, and various other types of classes within Laravel applications are always resolved using the container:</p>
+<pre class="language-"><code>use App\Contracts\EventPusher;
+
+/**
+ * Create a new class instance.
+ *
+ * @param  \App\Contracts\EventPusher  $pusher
+ * @return void
+ */
+public function __construct(EventPusher $pusher)
+{
+    $this-&gt;pusher = $pusher;
+}
+</code></pre><p><a name="contextual-binding"></a></p>
+<h3 id="contextual-binding">Contextual Binding</h3>
+<p>Sometimes you may have two classes that utilize the same interface, but you wish to inject different implementations into each class. For example, two controllers may depend on different implementations of the <code>Illuminate\Contracts\Filesystem\Filesystem</code> <a href="docs/contracts">contract</a>. Laravel provides a simple, fluent interface for defining this behavior:</p>
+<pre class="language-"><code>use App\Http\Controllers\PhotoController;
+use App\Http\Controllers\UploadController;
+use App\Http\Controllers\VideoController;
+use Illuminate\Contracts\Filesystem\Filesystem;
+use Illuminate\Support\Facades\Storage;
+
+$this-&gt;app-&gt;when(PhotoController::class)
+          -&gt;needs(Filesystem::class)
+          -&gt;give(function () {
+              return Storage::disk(&apos;local&apos;);
+          });
+
+$this-&gt;app-&gt;when([VideoController::class, UploadController::class])
+          -&gt;needs(Filesystem::class)
+          -&gt;give(function () {
+              return Storage::disk(&apos;s3&apos;);
+          });
+</code></pre><p><a name="binding-primitives"></a></p>
+<h3 id="binding-primitives">Binding Primitives</h3>
+<p>Sometimes you may have a class that receives some injected classes, but also needs an injected primitive value such as an integer. You may easily use contextual binding to inject any value your class may need:</p>
+<pre class="language-"><code>$this-&gt;app-&gt;when(&apos;App\Http\Controllers\UserController&apos;)
+          -&gt;needs(&apos;$variableName&apos;)
+          -&gt;give($value);
+</code></pre><p>Sometimes a class may depend on an array of <a href="#tagging">tagged</a> instances. Using the <code>giveTagged</code> method, you may easily inject all of the container bindings with that tag:</p>
+<pre class="language-"><code>$this-&gt;app-&gt;when(ReportAggregator::class)
+    -&gt;needs(&apos;$reports&apos;)
+    -&gt;giveTagged(&apos;reports&apos;);
+</code></pre><p>If you need to inject a value from one of your application&apos;s configuration files, you may use the <code>giveConfig</code> method:</p>
+<pre class="language-"><code>$this-&gt;app-&gt;when(ReportAggregator::class)
+    -&gt;needs(&apos;$timezone&apos;)
+    -&gt;giveConfig(&apos;app.timezone&apos;);
+</code></pre><p><a name="binding-typed-variadics"></a></p>
+<h3 id="binding-typed-variadics">Binding Typed Variadics</h3>
+<p>Occasionally, you may have a class that receives an array of typed objects using a variadic constructor argument:</p>
+<pre class="language-"><code>&lt;?php
+
+use App\Models\Filter;
+use App\Services\Logger;
+
+class Firewall
+{
+    /**
+     * The logger instance.
+     *
+     * @var \App\Services\Logger
+     */
+    protected $logger;
+
+    /**
+     * The filter instances.
+     *
+     * @var array
+     */
+    protected $filters;
+
+    /**
+     * Create a new class instance.
+     *
+     * @param  \App\Services\Logger  $logger
+     * @param  array  $filters
+     * @return void
+     */
+    public function __construct(Logger $logger, Filter ...$filters)
+    {
+        $this-&gt;logger = $logger;
+        $this-&gt;filters = $filters;
+    }
+}
+</code></pre><p>Using contextual binding, you may resolve this dependency by providing the <code>give</code> method with a closure that returns an array of resolved <code>Filter</code> instances:</p>
+<pre class="language-"><code>$this-&gt;app-&gt;when(Firewall::class)
+          -&gt;needs(Filter::class)
+          -&gt;give(function ($app) {
+                return [
+                    $app-&gt;make(NullFilter::class),
+                    $app-&gt;make(ProfanityFilter::class),
+                    $app-&gt;make(TooLongFilter::class),
+                ];
+          });
+</code></pre><p>For convenience, you may also just provide an array of class names to be resolved by the container whenever <code>Firewall</code> needs <code>Filter</code> instances:</p>
+<pre class="language-"><code>$this-&gt;app-&gt;when(Firewall::class)
+          -&gt;needs(Filter::class)
+          -&gt;give([
+              NullFilter::class,
+              ProfanityFilter::class,
+              TooLongFilter::class,
+          ]);
+</code></pre><p><a name="variadic-tag-dependencies"></a></p>
+<h4 id="variadic-tag-dependencies">Variadic Tag Dependencies</h4>
+<p>Sometimes a class may have a variadic dependency that is type-hinted as a given class (<code>Report ...$reports</code>). Using the <code>needs</code> and <code>giveTagged</code> methods, you may easily inject all of the container bindings with that <a href="#tagging">tag</a> for the given dependency:</p>
+<pre class="language-"><code>$this-&gt;app-&gt;when(ReportAggregator::class)
+    -&gt;needs(Report::class)
+    -&gt;giveTagged(&apos;reports&apos;);
+</code></pre><p><a name="tagging"></a></p>
+<h3 id="tagging">Tagging</h3>
+<p>Occasionally, you may need to resolve all of a certain &quot;category&quot; of binding. For example, perhaps you are building a report analyzer that receives an array of many different <code>Report</code> interface implementations. After registering the <code>Report</code> implementations, you can assign them a tag using the <code>tag</code> method:</p>
+<pre class="language-"><code>$this-&gt;app-&gt;bind(CpuReport::class, function () {
+    //
+});
+
+$this-&gt;app-&gt;bind(MemoryReport::class, function () {
+    //
+});
+
+$this-&gt;app-&gt;tag([CpuReport::class, MemoryReport::class], &apos;reports&apos;);
+</code></pre><p>Once the services have been tagged, you may easily resolve them all via the container&apos;s <code>tagged</code> method:</p>
+<pre class="language-"><code>$this-&gt;app-&gt;bind(ReportAnalyzer::class, function ($app) {
+    return new ReportAnalyzer($app-&gt;tagged(&apos;reports&apos;));
+});
+</code></pre><p><a name="extending-bindings"></a></p>
+<h3 id="extending-bindings">Extending Bindings</h3>
+<p>The <code>extend</code> method allows the modification of resolved services. For example, when a service is resolved, you may run additional code to decorate or configure the service. The <code>extend</code> method accepts a closure, which should return the modified service, as its only argument. The closure receives the service being resolved and the container instance:</p>
+<pre class="language-"><code>$this-&gt;app-&gt;extend(Service::class, function ($service, $app) {
+    return new DecoratedService($service);
+});
+</code></pre><p><a name="resolving"></a></p>
+<h2 id="resolving">Resolving</h2>
+<p><a name="the-make-method"></a></p>
+<h3 id="the-make-method">The <code>make</code> Method</h3>
+<p>You may use the <code>make</code> method to resolve a class instance from the container. The <code>make</code> method accepts the name of the class or interface you wish to resolve:</p>
+<pre class="language-"><code>use App\Services\Transistor;
+
+$transistor = $this-&gt;app-&gt;make(Transistor::class);
+</code></pre><p>If some of your class&apos; dependencies are not resolvable via the container, you may inject them by passing them as an associative array into the <code>makeWith</code> method. For example, we may manually pass the <code>$id</code> constructor argument required by the <code>Transistor</code> service:</p>
+<pre class="language-"><code>use App\Services\Transistor;
+
+$transistor = $this-&gt;app-&gt;makeWith(Transistor::class, [&apos;id&apos; =&gt; 1]);
+</code></pre><p>If you are outside of a service provider in a location of your code that does not have access to the <code>$app</code> variable, you may use the <code>App</code> <a href="docs/facades">facade</a> to resolve a class instance from the container:</p>
+<pre class="language-"><code>use App\Services\Transistor;
+use Illuminate\Support\Facades\App;
+
+$transistor = App::make(Transistor::class);
+</code></pre><p>If you would like to have the Laravel container instance itself injected into a class that is being resolved by the container, you may type-hint the <code>Illuminate\Container\Container</code> class on your class&apos; constructor:</p>
+<pre class="language-"><code>use Illuminate\Container\Container;
+
+/**
+ * Create a new class instance.
+ *
+ * @param  \Illuminate\Container\Container  $container
+ * @return void
+ */
+public function __construct(Container $container)
+{
+    $this-&gt;container = $container;
+}
+</code></pre><p><a name="automatic-injection"></a></p>
+<h3 id="automatic-injection">Automatic Injection</h3>
+<p>Alternatively, and importantly, you may type-hint the dependency in the constructor of a class that is resolved by the container, including <a href="docs/controllers">controllers</a>, <a href="docs/events">event listeners</a>, <a href="docs/middleware">middleware</a>, and more. Additionally, you may type-hint dependencies in the <code>handle</code> method of <a href="docs/queues">queued jobs</a>. In practice, this is how most of your objects should be resolved by the container.</p>
+<p>For example, you may type-hint a repository defined by your application in a controller&apos;s constructor. The repository will automatically be resolved and injected into the class:</p>
+<pre class="language-"><code>&lt;?php
+
+namespace App\Http\Controllers;
+
+use App\Repositories\UserRepository;
+
+class UserController extends Controller
+{
+    /**
+     * The user repository instance.
+     *
+     * @var \App\Repositories\UserRepository
+     */
+    protected $users;
+
+    /**
+     * Create a new controller instance.
+     *
+     * @param  \App\Repositories\UserRepository  $users
+     * @return void
+     */
+    public function __construct(UserRepository $users)
+    {
+        $this-&gt;users = $users;
+    }
+
+    /**
+     * Show the user with the given ID.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
+    {
+        //
+    }
+}
+</code></pre><p><a name="container-events"></a></p>
+<h2 id="container-events">Container Events</h2>
+<p>The service container fires an event each time it resolves an object. You may listen to this event using the <code>resolving</code> method:</p>
+<pre class="language-"><code>use App\Services\Transistor;
+
+$this-&gt;app-&gt;resolving(Transistor::class, function ($transistor, $app) {
+    // Called when container resolves objects of type &quot;Transistor&quot;...
+});
+
+$this-&gt;app-&gt;resolving(function ($object, $app) {
+    // Called when container resolves object of any type...
+});
+</code></pre><p>As you can see, the object being resolved will be passed to the callback, allowing you to set any additional properties on the object before it is given to its consumer.</p>
+<p><a name="psr-11"></a></p>
+<h2 id="psr-11">PSR-11</h2>
+<p>Laravel&apos;s service container implements the <a href="https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-11-container.md" target="_blank">PSR-11</a> interface. Therefore, you may type-hint the PSR-11 container interface to obtain an instance of the Laravel container:</p>
+<pre class="language-"><code>use App\Services\Transistor;
+use Psr\Container\ContainerInterface;
+
+Route::get(&apos;/&apos;, function (ContainerInterface $container) {
+    $service = $container-&gt;get(Transistor::class);
+
+    //
+});
+</code></pre><p>An exception is thrown if the given identifier can&apos;t be resolved. The exception will be an instance of <code>Psr\Container\NotFoundExceptionInterface</code> if the identifier was never bound. If the identifier was bound but was unable to be resolved, an instance of <code>Psr\Container\ContainerExceptionInterface</code> will be thrown.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="lifecycle.html" class="navigation navigation-prev " aria-label="Previous page: Request Lifecycle">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="providers.html" class="navigation navigation-next " aria-label="Next page: Service Providers">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Service Container","level":"1.4.2","depth":2,"next":{"title":"Service Providers","level":"1.4.3","depth":2,"path":"providers.md","ref":"providers.md","articles":[]},"previous":{"title":"Request Lifecycle","level":"1.4.1","depth":2,"path":"lifecycle.md","ref":"lifecycle.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-highlight","-livereload","prism"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-solarizedlight.css"]},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Laravel 英文文档","language":"us-en","links":{"sidebar":{"Home":"https://docs.khs1994.com"}},"gitbook":"*"},"file":{"path":"container.md","mtime":"2021-05-20T00:16:11.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-05-20T00:17:09.960Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
